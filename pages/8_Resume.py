@@ -102,7 +102,7 @@ st.write(
 
 *Jul 2023 - Aug 2023*
 
-- ► Developed a web application with Flask which scans multiple camera streams in the local network and displays them.
+- ► Developed an API which scans multiple camera streams in the local network and displays them.
 - ► Experimented with and benchmarked multiple object detection models in the Nvidia TAO Toolkit.
 - ► Trained YOLOv8 model on the same task using a mixture of synthetic and real data and validated on real data only. Using this approach achieved 96% validation mAP50.
 """)
