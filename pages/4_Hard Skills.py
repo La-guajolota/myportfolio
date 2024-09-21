@@ -21,7 +21,7 @@ def txt3(a, b):
 
 st.markdown(f'<p style="font-size: 20px;">Deep Learning, Computer Vision, Docker</p>', unsafe_allow_html=True)
 
-txt3("Operating Systems","`Linux`")
 txt3("Programming languages","`Python`")
+txt3("Operating Systems","`Linux`")
 txt3("Libraries & Frameworks","`Ultralytics`, `Detectron2`, `MMDetection`, `Tensorflow`, `Keras`, `Streamlit`, `Flask`, `OpenCV`, `Pandas`, `Numpy`, `Matplotlib`, `Seaborn`, `Scikit-learn`, `Pillow`")
 txt3("Tools","`Nvidia TAO`, `mediapipe`, `YOLOv8`")

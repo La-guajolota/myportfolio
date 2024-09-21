@@ -32,7 +32,7 @@ with st.container():
 
     with right_column:
         st.title("Issam Jebnouni")
-        st.write("Computer Vision Engineer")
+        st.write("AI Engineer")
         st.download_button(
             label=" 📄 Download Resume",
             data=PDFbyte,
@@ -52,12 +52,12 @@ st.write('\n')
 st.subheader("Hard Skills", divider="red")
 st.write(
     """
-- ► Image and Video Processing
 - ► Machine Learning, Deep Learning, Computer Vision
+- ► Image and Video Processing
 - ► Git
 - ► Docker
-- ► Operating Systems: Linux
 - ► Programming languages: Python
+- ► Operating Systems: Linux
 - ► Libraries & Frameworks: Ultralytics, MMDetection, Detectron2, Tensorflow, Keras, Streamlit, Flask, OpenCV, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, Pillow
 - ► Tools: Nvidia TAO, Mediapipe
 """
@@ -84,7 +84,7 @@ st.subheader("Work Experience", divider="red")
 # --- Experience 2
 st.write(
     """
-**∎ Computer Vision End-of-studies Intern @ [Avidea](https://www.avidea.tn/)**
+**∎ AI Engineer (End-of-studies Internship) @ [Avidea](https://www.avidea.tn/)**
 
 *Feb 2024 - May 2024*
 
@@ -98,7 +98,7 @@ st.write(
 # --- Experience 1
 st.write(
     """
-**∎ Computer Vision Summer Intern @ [DataDoIt](https://data-doit.com/)**
+**∎ AI Engineer (Summer Internship) @ [DataDoIt](https://data-doit.com/)**
 
 *Jul 2023 - Aug 2023*
 

@@ -23,8 +23,8 @@ with st.container():
     left_column, middle_column, right_column = st.columns((1,0.2,0.6))
     with left_column:
         st.header("About Me", divider='red')
-        st.subheader("Aspiring Computer Vision Engineer")
-        st.write("- 👋🏻 Hi, I'm Issam! I am a freshly graduated computer vision engineer. I bring both motivation and commitment to make meaningful contributions in the field.")
+        st.subheader("Aspiring AI Engineer")
+        st.write("- 👋🏻 Hi, I'm Issam! I am a freshly graduated AI engineer. I bring both motivation and commitment to make meaningful contributions in the field.")
         st.download_button(
         label=" 📄 Download Resume",
         data=PDFbyte,

@@ -20,7 +20,7 @@ with st.container():
     with image_column:
         st.image(avidea)
     with text_column:
-        st.subheader("Computer Vision End-of-studies Intern @ [Avidea](https://www.avidea.tn/)")
+        st.subheader("AI Engineer (End-of-studies Internship) @ [Avidea](https://www.avidea.tn/)")
         st.write("*Feb 2024 - May 2024*")
         st.markdown("""
         - ► Trained a car damage segmentation model to identify 6 damage types in insurance subscription images.
@@ -36,7 +36,7 @@ with st.container():
     with image_column:
         st.image(datadoit)
     with text_column:
-        st.subheader("Computer Vision Summer Intern @ [DataDoIt](https://data-doit.com/)")
+        st.subheader("AI Engineer (Summer Internship) @ [DataDoIt](https://data-doit.com/)")
         st.write("*Jul 2023 - Aug 2023*")
         st.markdown("""
         - ► Developed a Flask-based web interface for scanning and displaying local network RTSP camera streams.
