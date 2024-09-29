@@ -55,6 +55,7 @@ st.write(
 - ► Machine Learning, Deep Learning, Computer Vision
 - ► Image and Video Processing
 - ► Git
+- ► SQL
 - ► Docker
 - ► Programming languages: Python
 - ► Operating Systems: Linux
