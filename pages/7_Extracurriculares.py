@@ -25,6 +25,9 @@ bushsido = Image.open('assets/bushido.png')
 bushteam = Image.open('assets/equipobushido.jpeg')
 
 lechuga = Image.open('assets/lechuagerminado.jpeg')
+lechuga2 = Image.open('assets/lechugaleds.jpeg')
+lechuga3 = Image.open('assets/lechugasiemens.jpeg')
+
 
 with st.container():
     text_column, mid, image_column = st.columns((3,0.4,1))
@@ -71,7 +74,9 @@ with st.container():
         st.empty()
     with image_column:
         st.image(lechuga, caption="Germinado de lechugas hidropónicas")
-        
+        st.image(lechuga2, caption="Germinado de lechugas hidropónicas")
+        st.image(lechuga3, caption="Germinado de lechugas hidropónicas")
+
 
 with st.container():
     text_column, mid, image_column = st.columns((3,0.4,1))
