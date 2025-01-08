@@ -10,26 +10,35 @@ css_file = current_dir.parent / "styles" / "projects.css"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-st.header("Extracurricular Activities", divider="red")
+st.header("Actividades Extracurriculares", divider="red")
 
-ieee = Image.open('assets/ieee_tn.png')
-cs = Image.open('assets/cs.png')
-insat = Image.open('assets/ieee_insat.png')
+# Images
+cio = Image.open('assets/ciologo.png')
+cioid = Image.open('assets/ciocredencial.jpeg')
+cioid = cioid.crop((0, 200, cioid.width, cioid.height - 200))
+
+#baja = Image.open('assets/baja.png')
+
+#robotica = Image.open('assets/robotica')
+
+bushsido = Image.open('assets/bushido.png')
+bushteam = Image.open('assets/equipobushido.jpeg')
 
 with st.container():
     text_column, mid, image_column = st.columns((3,0.4,1))
     with text_column:
-        st.subheader("Head of Public and Industry Relations", divider="blue")
-        st.write("*Apr 2023 – Present*")
+        st.subheader("Jefe de Relaciones Públicas e Industriales", divider="blue")
+        st.write("*Abr 2023 – Presente*")
         st.markdown("""
-        - ► Joined the core team of the Taskforce for Efficient Organizational Units Accounting.
-        - ► This project supported by the IEEE Tunisia Section will improve the experience of 30+ student branches and their subunits.
-        - ► This year-long project aims to restructure the communication flow among all the units and subunits with the section and reduce unnecessary emails and phone calls by more than 50%.
+        - ► Me uní al equipo central del Grupo de Trabajo para la Contabilidad Eficiente de Unidades Organizativas.
+        - ► Este proyecto, apoyado por la Sección IEEE de Túnez, mejorará la experiencia de más de 30 ramas estudiantiles y sus subunidades.
+        - ► Este proyecto de un año tiene como objetivo reestructurar el flujo de comunicación entre todas las unidades y subunidades con la sección y reducir los correos electrónicos y llamadas telefónicas innecesarios en más del 50%.
                     """)
     with mid:
         st.empty()
     with image_column:
-        st.image(ieee, caption="IEEE Tunisia Section")
+        st.image(cio, caption="Centro de Investigación en óptica")
+        st.image(cioid)
 
 with st.container():
     text_column, mid, image_column = st.columns((3,0.4,1))
@@ -44,7 +53,8 @@ with st.container():
     with mid:
         st.empty()
     with image_column:
-        st.image(insat, caption="IEEE INSAT Student Branch")
+        st.image(bushsido, caption="SMC")
+        st.image(bushteam, caption="Soy el de guinda :)")
 
 with st.container():
     text_column, mid, image_column = st.columns((3,0.4,1))
@@ -58,7 +68,7 @@ with st.container():
     with mid:
         st.empty()
     with image_column:
-        st.image(cs, caption="IEEE Computer Society Chapter INSAT")
+        pass
 
 with st.container():
     text_column, mid, image_column = st.columns((3,0.4,1))
@@ -73,4 +83,4 @@ with st.container():
     with mid:
         st.empty()
     with image_column:
-        st.image(cs, caption="IEEE Computer Society Chapter INSAT")
+        pass

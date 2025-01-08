@@ -4,9 +4,9 @@ from pathlib import Path
 
 st.set_page_config(layout="wide")
 
-st.header("Education", divider="red")
+st.header("Educación", divider="red")
 
-insat = Image.open("assets/INSAT.jpg")
+insat = Image.open("assets/sallelogo.png")
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir.parent / "styles" / "education.css"
@@ -18,7 +18,7 @@ with st.container():
 
     image_column, text_column = st.columns((1,2.5))
     with image_column:
-        st.image(insat, width=200, caption="National Institute of Applied Sciences and Technology")
+        st.image(insat, width=200, caption="Universidad la Salle Bajío")
 
     with text_column:
         st.write("### Master of Science, [_INSAT_](https://insat.rnu.tn) (2019-2024)")
