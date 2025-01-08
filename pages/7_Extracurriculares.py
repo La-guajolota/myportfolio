@@ -24,6 +24,8 @@ cioid = cioid.crop((0, 200, cioid.width, cioid.height - 200))
 bushsido = Image.open('assets/bushido.png')
 bushteam = Image.open('assets/equipobushido.jpeg')
 
+lechuga = Image.open('assets/lechuagerminado.jpeg')
+
 with st.container():
     text_column, mid, image_column = st.columns((3,0.4,1))
     with text_column:
@@ -68,7 +70,8 @@ with st.container():
     with mid:
         st.empty()
     with image_column:
-        pass
+        st.image(lechuga, caption="Germinado de lechugas hidropónicas")
+        
 
 with st.container():
     text_column, mid, image_column = st.columns((3,0.4,1))
