@@ -5,7 +5,7 @@ from pathlib import Path
 
 st.set_page_config(layout="wide")
 
-st.header("Projects", divider="red")
+st.header("Proyectos y prácticas", divider="red")
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir.parent / "styles" / "projects.css"
@@ -13,7 +13,25 @@ css_file = current_dir.parent / "styles" / "projects.css"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-#faceid = Image.open("assets/faceid.jpg")
+# Soldadura a puntos
+#estructura = Image.open("assets/estructura.jpeg")
+
+# librecultivo
+stand = Image.open("assets/standcultivo.jpeg")
+hongo = Image.open("assets/hongo.jpeg")
+elec = Image.open("assets/eleclechu.png")
+
+# GRADICOS EN MCUS
+
+#CONTROLADORES
+#PIDfoco = Image.open("assets/PIDfoco.jpeg")
+#PIDbalancin = Image.open("assets/PIDbalancin.jpeg")
+
+#PCB
+tang20 = Image.open("assets/tang20k.jpeg")
+tang9 = Image.open("assets/tang9k.jpeg")
+controlpotencia = Image.open("assets/controlpotencia.jpeg")
+
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
@@ -46,7 +64,9 @@ with st.container():
         mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/Facial-Verification")
 
     with image_column:
-        pass
+        st.image(stand, caption="Germinado de lechugas hidropónicas")
+        st.image(hongo, caption="Aprendí torneado básico")
+        st.image(elec, caption="Germinado de lechugas hidropónicas")
 
 with st.container():
     text_column, image_column = st.columns((3,1))
@@ -105,4 +125,6 @@ with st.container():
         mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/Arabic-Word-level-Sign-Language-Recognition")
 
     with image_column:
-        pass
+        st.image(tang9, caption="Germinado de lechugas hidropónicas")
+        st.image(tang20, caption="Aprendí torneado básico")
+        st.image(controlpotencia, caption="Germinado de lechugas hidropónicas")
