@@ -68,13 +68,13 @@ with st.container():
         st.write("*Control digital | microcontroladores | asignatura | Equipo*")
         st.markdown("""
             - ⚙️ **Control PID de Balancín**: 
-            - Implementé un control PID para un balancín utilizando un motor brushless de dron, un encoder magnético digital y una placa de desarrollo PSoc 5LP como controlador. Añadí una interfaz gráfica para modificar en tiempo real las constantes P-I-D y el setpoint (ángulo de inclinación del balancín), además de visualizar gráficas del error, la posición y la potencia del motor (0-100%).
+            - Implementación de un control PID para un balancín utilizando un motor brushless de dron, un encoder magnético digital y una placa de desarrollo PSoc 5LP como controlador. Se añadió una interfaz gráfica para modificar en tiempo real las constantes P-I-D y el setpoint (ángulo de inclinación del balancín), además de visualizar gráficas del error, la posición y la potencia del motor (0-100%).
             - 🌡️ **Control PID de Temperatura**: 
-            - Desarrollé un control PID discreto en un Arduino UNO para regular la temperatura dentro de una cubeta de pintura, simulando una incubadora. La planta es un foco incandescente de 100W y el sensor es un DHT11. Controlamos la potencia del foco mediante un SSR y cruce por cero, permitiendo seleccionar la proporción de semiciclos de la onda de la red eléctrica en un segundo (x/120 semiciclos por segundo). También incluí una interfaz de control y monitoreo en LabVIEW para visualizar la temperatura actual y controlar los setpoints.
+            - Desarrollo de un control PID discreto en un Arduino UNO para regular la temperatura dentro de una cubeta de pintura, simulando una incubadora. La planta es un foco incandescente de 100W y el sensor es un DHT11. Se controla la potencia del foco mediante un SSR y cruce por cero, permitiendo seleccionar la proporción de semiciclos de la onda de la red eléctrica en un segundo (x/120 semiciclos por segundo). También se incluyó una interfaz de control y monitoreo en LabVIEW para visualizar la temperatura actual y controlar los setpoints.
             - 🔧 **Control de Movimiento de 2 Ejes con Motores DC con Encoder**: 
-            - Implementé un sistema de control de movimiento para dos ejes utilizando motores DC con encoders, permitiendo un control preciso de la posición para escanear los píxeles con dos LEDs, uno emisor y otro receptor infrarrojo. La interfaz del escaneo fue en un terminal y programada en Python.
+            - Implementación de un sistema de control de movimiento para dos ejes utilizando motores DC con encoders, permitiendo un control preciso de la posición para escanear los píxeles con dos LEDs, uno emisor y otro receptor infrarrojo. La interfaz del escaneo fue en un terminal y programada en Python.
             
-            🛠️ **Mis Aportes**:
+            🛠️ **Aportes**:
             1. En todos los proyectos, fui responsable de la programación de los microcontroladores, la implementación de los algoritmos de control y la interfaz de control y monitoreo (a excepción del control de temperatura).
         """)
         st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
