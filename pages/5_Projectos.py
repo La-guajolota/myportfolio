@@ -34,13 +34,22 @@ controlpotencia = Image.open("assets/controlpotencia.jpeg")
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.subheader("YOLOv8 Object Detection for Football", divider="blue")
-        st.write("*Self-initiated project*")
+        st.subheader("Soldador de puntos", divider="blue")
+        st.write("*Electrónica industrial - asignatura - equipo*")
         st.markdown("""
-            - ► Imported from roboflow a custom dataset containing 1,327 images annotated with four distinct classes: player, ball, referee, and goalkeeper.
-            - ► Trained a YOLOv8 object detection pretrained model on this custom dataset achieving 0.86 mAP50 on the validation set.
+            **Descripción**:
+            El proyecto consistió en diseñar y construir una automatización para soldadura por puntos utilizando PLC, HMI y neumática.
+            El usuario puede seleccionar un modo manual, en el cual controla el voltaje promedio que pasa por el material y la posición del pistón que sujeta el electrodo.
+            En modo automático, el operador selecciona la cantidad de ciclos, los tiempos de duración de cada ciclo y el voltaje promedio durante todo el proceso.
+                
+            **Mis aportes**:
+            Colaboré en la programación del PLC y en el diseño de una tarjeta de control para interfazar con el tablero de control.
+            Esta tarjeta permite controlar el voltaje promedio que pasa por el material mediante un potenciómetro.
+            La tarjeta fue implementada con un STM32f103c8t6. La misma que se encuentra en esta página.
         """)
-        mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/YOLOv8-Object-Detection-for-Football")
+        mention(label="Demostración de funcionamiento", icon="tiktok", url="https://vm.tiktok.com/ZMkf7bJaX/")
+        mention(label="Pruebas de potencia 1", icon="tiktok", url="https://vm.tiktok.com/ZMkfvYuPP/")
+        mention(label="Pruebas de potencia 2", icon="tiktok", url="https://vm.tiktok.com/ZMkfv5oLb/")
 
     with image_column:
         st.image(estructura, caption="Germinado de lechugas hidropónicas")
@@ -59,8 +68,8 @@ with st.container():
             precision on the test set — 99% and 100% respectively.
             - ► Real-time testing demonstrated the model’s practical utility.
         """)
-        mention(label="Streamlit App", icon="streamlit", url="https://facial-verification.streamlit.app/")
-        mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/Facial-Verification")
+        mention(label="Playlist-documentación", icon="youtube", url="https://www.youtube.com/watch?v=h5dIs2VbnKQ&list=PLz4Si3LTpIHn8Sm7qZtzyirCftxZIDVzY&index=3")
+        mention(label="Github Repo", icon="github", url="https://github.com/La-guajolota/Libre-cultivo")
 
     with image_column:
         st.image(stand, caption="Germinado de lechugas hidropónicas")
@@ -107,4 +116,4 @@ with st.container():
     with image_column:
         st.image(tang9, caption="Germinado de lechugas hidropónicas")
         st.image(tang20, caption="Aprendí torneado básico")
-        st.image(controlpotencia, caption="Germinado de lechugas hidropónicas")
+        st.image(controlpotencia, caption="Control de carga promedia AC")
