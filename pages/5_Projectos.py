@@ -37,44 +37,27 @@ with st.container():
         st.subheader("Soldador de puntos", divider="blue")
         st.write("*Electrónica industrial - asignatura - equipo*")
         st.markdown("""
-            **Descripción**:
+            - ► **Descripción**:
             El proyecto consistió en diseñar y construir una automatización para soldadura por puntos utilizando PLC, HMI y neumática.
             El usuario puede seleccionar un modo manual, en el cual controla el voltaje promedio que pasa por el material y la posición del pistón que sujeta el electrodo.
             En modo automático, el operador selecciona la cantidad de ciclos, los tiempos de duración de cada ciclo y el voltaje promedio durante todo el proceso.
                 
-            **Mis aportes**:
+            - ► **Mis aportes**:
             Colaboré en la programación del PLC y en el diseño de una tarjeta de control para interfazar con el tablero de control.
             Esta tarjeta permite controlar el voltaje promedio que pasa por el material mediante un potenciómetro.
             La tarjeta fue implementada con un STM32f103c8t6. La misma que se encuentra en esta página.
         """)
-        mention(label="Demostración de funcionamiento", icon="tiktok", url="https://vm.tiktok.com/ZMkf7bJaX/")
-        mention(label="Pruebas de potencia 1", icon="tiktok", url="https://vm.tiktok.com/ZMkfvYuPP/")
-        mention(label="Pruebas de potencia 2", icon="tiktok", url="https://vm.tiktok.com/ZMkfv5oLb/")
+        st.markdown("#### Evidencia Audiovisual", unsafe_allow_html=True)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            mention(label="Demostración", icon="tiktok", url="https://vm.tiktok.com/ZMkf7bJaX/")
+        with col2:
+            mention(label="TEST_1", icon="tiktok", url="https://vm.tiktok.com/ZMkfvYuPP/")
+        with col3:
+            mention(label="TEST_2", icon="tiktok", url="https://vm.tiktok.com/ZMkfv5oLb/")
 
     with image_column:
-        st.image(estructura, caption="Germinado de lechugas hidropónicas")
-
-with st.container():
-    text_column, image_column = st.columns((3,1))
-    with text_column:
-        st.subheader("Building a Siamese Neural Network for Face Verification", divider="blue")
-        st.write("*Self-initiated project*")
-        st.markdown("""
-            - ► Built a Siamese network, specifically designed for comparing similarities. With twin subnetworks generating 
-            embeddings and a tailored loss function, it excelled in facial recognition.
-            - ► By crafting a training dataset, incorporating data augmentation, and utilizing VGGFace for feature 
-            extraction, I improved the model’s accuracy. 
-            - ► The Siamese architecture, coupled with a custom training loop, yielded remarkable average recall and 
-            precision on the test set — 99% and 100% respectively.
-            - ► Real-time testing demonstrated the model’s practical utility.
-        """)
-        mention(label="Playlist-documentación", icon="youtube", url="https://www.youtube.com/watch?v=h5dIs2VbnKQ&list=PLz4Si3LTpIHn8Sm7qZtzyirCftxZIDVzY&index=3")
-        mention(label="Github Repo", icon="github", url="https://github.com/La-guajolota/Libre-cultivo")
-
-    with image_column:
-        st.image(stand, caption="Germinado de lechugas hidropónicas")
-        st.image(hongo, caption="Aprendí torneado básico")
-        st.image(elec, caption="Germinado de lechugas hidropónicas")
+        st.image(estructura, caption="Soldadora de puntos y panel de control")
 
 with st.container():
     text_column, image_column = st.columns((3,1))
@@ -117,3 +100,38 @@ with st.container():
         st.image(tang9, caption="Germinado de lechugas hidropónicas")
         st.image(tang20, caption="Aprendí torneado básico")
         st.image(controlpotencia, caption="Control de carga promedia AC")
+
+#PROYECTO LIBRE CULTIVO
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("Instrumentalización y automatización inteligente de cultivo urbano", divider="blue")
+        st.write("*Agricultura de precisión - proyecto personal - actualmente activo*")
+        st.markdown("""
+            - 🥬 **Descripción**:
+            El objetivo es desarrollar un sistema de control autónomo y dinámico para un cultivo vertical urbano. Las metas incluyen sensar en tiempo real 
+            el estado del stand de crecimiento, almacenar una gran cantidad de parámetros para análisis posteriores (con la posibilidad de implementar 
+            soluciones de control adaptativo) y dosificar inteligentemente para economizar recursos hídricos y energéticos. Actualmente, el proyecto se encuentra 
+            en fase de pruebas e investigación.
+               
+            🥬 **Logros**:
+            1. Diseño de una tarjeta de control de intensidad lumínica de LEDs de horticultura, incluyendo protección contra sobretensiones y corrientes.
+            2. Interfaz de control y monitoreo móvil y web por MQTT.
+            3. Diseño de mi propio sistema de red de sensores y actuadores (IoT). Aún estoy trabajando en el diseño analógico de sensores con electrodos selectivos de iones para medir la concentración de nutrientes y la calidad del agua.
+            4. Implementación de filtros digitales para sensores analógicos, así como métodos estadísticos eficientes en microcontroladores.
+            5. Aprendizaje constante de las técnicas de cultivo hidropónico y aeropónico (aún en progreso). 
+            6. Aprendizaje constante y actualmente en proceso de machine learning para la optimización de los parámetros de cultivo.
+        """)
+        st.markdown("#### Evidencia Audiovisual", unsafe_allow_html=True)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            mention(label="Playlist-documentación", icon="youtube", url="https://www.youtube.com/watch?v=h5dIs2VbnKQ&list=PLz4Si3LTpIHn8Sm7qZtzyirCftxZIDVzY&index=3")
+        with col2:
+            mention(label="Github Repo", icon="github", url="https://github.com/La-guajolota/Libre-cultivo")
+        with col3:
+            mention(label="TEST_2", icon="tiktok", url="https://vm.tiktok.com/ZMkfv5oLb/")
+
+    with image_column:
+        st.image(stand, caption="Este es mi stand de cultivo urbano")
+        st.image(hongo, caption="Actualmente experimento con el cultivo de zetas comestibles")
+        st.image(elec, caption="EL primer prototipado de control del rack")
