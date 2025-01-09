@@ -13,10 +13,7 @@ css_file = current_dir.parent / "styles" / "projects.css"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-faceid = Image.open("assets/faceid.jpg")
-sl = Image.open("assets/sign-language.jpg")
-foot = Image.open("assets/foot.jpg")
-
+#faceid = Image.open("assets/faceid.jpg")
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
@@ -29,7 +26,7 @@ with st.container():
         mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/YOLOv8-Object-Detection-for-Football")
 
     with image_column:
-        st.image(foot)
+        pass
 
 with st.container():
     text_column, image_column = st.columns((3,1))
@@ -49,7 +46,26 @@ with st.container():
         mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/Facial-Verification")
 
     with image_column:
-        st.image(faceid)
+        pass
+
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("Arabic Word-level Sign Language Recognition", divider="blue")
+        st.write("*End of Year project*")
+        st.markdown("""
+            - ► Worked on the largest dataset for word-level Arabic sign language recognition, containing 502 words 
+            performed by three signers. I used the 100 words subset of this dataset for experiments.
+            - ► Leveraged mediapipe's holistic model to extract the hand and pose landmarks and used them to train a 
+            Bidirectional LSTM model. Setting Adam optimizer, categorical_crossentropy loss and categorical_accuracy metric.
+            - ► Achieved 99.6% accuracy on the test set and 0.026 loss.
+            - ► Examined the generalization ability of our model, testing its performance with unseen persons and under 
+            different conditions. This exploration uncovered areas for improvement, which we will focus on in the future.
+        """)
+        mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/Arabic-Word-level-Sign-Language-Recognition")
+
+    with image_column:
+        pass
 
 
 with st.container():
@@ -69,4 +85,24 @@ with st.container():
         mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/Arabic-Word-level-Sign-Language-Recognition")
 
     with image_column:
-        st.image(sl)
+        pass
+
+
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.subheader("Arabic Word-level Sign Language Recognition", divider="blue")
+        st.write("*End of Year project*")
+        st.markdown("""
+            - ► Worked on the largest dataset for word-level Arabic sign language recognition, containing 502 words 
+            performed by three signers. I used the 100 words subset of this dataset for experiments.
+            - ► Leveraged mediapipe's holistic model to extract the hand and pose landmarks and used them to train a 
+            Bidirectional LSTM model. Setting Adam optimizer, categorical_crossentropy loss and categorical_accuracy metric.
+            - ► Achieved 99.6% accuracy on the test set and 0.026 loss.
+            - ► Examined the generalization ability of our model, testing its performance with unseen persons and under 
+            different conditions. This exploration uncovered areas for improvement, which we will focus on in the future.
+        """)
+        mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/Arabic-Word-level-Sign-Language-Recognition")
+
+    with image_column:
+        pass

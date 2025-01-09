@@ -1,4 +1,4 @@
-# Portfolio [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://issam-jebnouni.streamlit.app/)  
+# Portfolio [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://myportfolio-lysedvuegsqrypoxyz2k7q.streamlit.app/)  
 
 ## Overview  
 This portfolio is based on the original repository created by **[Issam Jebnouni](https://issam-jebnouni.streamlit.app/)**, to whom I am grateful for sharing his work. The original project was designed as an extension of a resume, showcasing achievements and projects through a web application built with **Streamlit**, a simple Python-based framework.  
@@ -16,4 +16,4 @@ I have made several modifications and customizations to adapt the original proje
 ### Why Streamlit?  
 Streamlit allowed me to focus on improving my project models rather than dealing with complex web code. Its user-friendly features enabled me to develop this application quickly and efficiently. Moreover, its ability to share web applications directly from Python code makes it an ideal tool for showcasing data science projects.  
 
-*For the best experience, I recommend browsing [this web application](https://issam-jebnouni.streamlit.app/) on a desktop!*  
+*For the best experience, I recommend browsing [this web application](https://myportfolio-lysedvuegsqrypoxyz2k7q.streamlit.app/) on a desktop!*  

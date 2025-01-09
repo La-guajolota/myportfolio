@@ -17,9 +17,12 @@ cio = Image.open('assets/ciologo.png')
 cioid = Image.open('assets/ciocredencial.jpeg')
 cioid = cioid.crop((0, 200, cioid.width, cioid.height - 200))
 
-#baja = Image.open('assets/baja.png')
+baja0 = Image.open('assets/baja0.jpeg')
+baja1 = Image.open('assets/torneado.jpeg')
+baja2 = Image.open('assets/baja2.jpeg')
 
-#robotica = Image.open('assets/robotica')
+robotica0 = Image.open('assets/buckdisenno.jpeg')
+robotica1 = Image.open('assets/3d.jpeg')
 
 bushsido = Image.open('assets/bushido.png')
 bushteam = Image.open('assets/equipobushido.jpeg')
@@ -91,4 +94,22 @@ with st.container():
     with mid:
         st.empty()
     with image_column:
-        pass
+        st.image(baja0, caption="Germinado de lechugas hidropónicas")
+        st.image(baja1, caption="Aprendí torneado básico")
+        st.image(baja2, caption="Germinado de lechugas hidropónicas")
+
+with st.container():
+    text_column, mid, image_column = st.columns((3,0.4,1))
+    with text_column:
+        st.subheader("Ambassador / Project Manager", divider="blue")
+        st.write("*Apr 2021 – Oct 2021*")
+        st.markdown("""
+        - ► This was the fifteenth edition of the international competetitive programming hackathon IEEEXtreme.
+        - ► Managed a committee to organize a highly successful edition of the hackathon, attracting 160 participants.
+        - ► Communicated essential information provided by regional ambassadors, facilitating effective coordination.
+        """)
+    with mid:
+        st.empty()
+    with image_column:
+        st.image(robotica0, caption="Germinado de lechugas hidropónicas")
+        st.image(robotica1, caption="Aprendí torneado básico")
