@@ -10,7 +10,8 @@ css_file = current_dir.parent / "styles" / "projects.css"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-st.header("Actividades Extracurriculares", divider="red")
+st.markdown("<h2 style='text-align:center; font-weight:bold; margin-bottom:0;'>Actividades Extracurriculares</h2>", unsafe_allow_html=True)
+st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
 
 # Images
 cio = Image.open('assets/ciologo.png')

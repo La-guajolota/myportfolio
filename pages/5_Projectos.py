@@ -5,7 +5,7 @@ from pathlib import Path
 
 st.set_page_config(layout="wide")
 
-st.header("Proyectos y prácticas", divider="red")
+st.markdown("<h1 style='text-align:center; font-weight:bold;'>Proyectos y prácticas destacables</h1>", unsafe_allow_html=True)
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir.parent / "styles" / "projects.css"
@@ -31,23 +31,23 @@ tang20 = Image.open("assets/tang20k.jpeg")
 tang9 = Image.open("assets/tang9k.jpeg")
 controlpotencia = Image.open("assets/controlpotencia.jpeg")
 
+#PROYECTO SOLDADOR DE PUNTOS
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.subheader("Soldador de puntos", divider="blue")
+        st.markdown("<h2 style='color:red;'>Soldador de puntos</h2>", unsafe_allow_html=True)
+        st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
         st.write("*Electrónica industrial - asignatura - equipo*")
         st.markdown("""
-            - ► **Descripción**:
-            El proyecto consistió en diseñar y construir una automatización para soldadura por puntos utilizando PLC, HMI y neumática.
-            El usuario puede seleccionar un modo manual, en el cual controla el voltaje promedio que pasa por el material y la posición del pistón que sujeta el electrodo.
-            En modo automático, el operador selecciona la cantidad de ciclos, los tiempos de duración de cada ciclo y el voltaje promedio durante todo el proceso.
-                
-            - ► **Mis aportes**:
+            - ⚙️ **Descripción**:
+            - El proyecto consistió en diseñar y construir una automatización para soldadura por puntos utilizando PLC, HMI y neumática. El usuario puede seleccionar un modo manual, en el cual controla el voltaje promedio que pasa por el material y la posición del pistón que sujeta el electrodo. En modo automático, el operador selecciona la cantidad de ciclos, los tiempos de duración de cada ciclo y el voltaje promedio durante todo el proceso.
+            
+            🛠️ **Mis aportes**:
             Colaboré en la programación del PLC y en el diseño de una tarjeta de control para interfazar con el tablero de control.
             Esta tarjeta permite controlar el voltaje promedio que pasa por el material mediante un potenciómetro.
             La tarjeta fue implementada con un STM32f103c8t6. La misma que se encuentra en esta página.
         """)
-        st.markdown("#### Evidencia Audiovisual", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
             mention(label="Demostración", icon="tiktok", url="https://vm.tiktok.com/ZMkf7bJaX/")
@@ -59,53 +59,80 @@ with st.container():
     with image_column:
         st.image(estructura, caption="Soldadora de puntos y panel de control")
 
+#Proyectos de control
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.subheader("Arabic Word-level Sign Language Recognition", divider="blue")
-        st.write("*End of Year project*")
+        st.markdown("<h2 style='color:red;'>Controles de posición y temperatura</h2>", unsafe_allow_html=True)
+        st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
+        st.write("*Control digital | microcontroladores | asignatura | Equipo*")
         st.markdown("""
-            - ► Worked on the largest dataset for word-level Arabic sign language recognition, containing 502 words 
-            performed by three signers. I used the 100 words subset of this dataset for experiments.
-            - ► Leveraged mediapipe's holistic model to extract the hand and pose landmarks and used them to train a 
-            Bidirectional LSTM model. Setting Adam optimizer, categorical_crossentropy loss and categorical_accuracy metric.
-            - ► Achieved 99.6% accuracy on the test set and 0.026 loss.
-            - ► Examined the generalization ability of our model, testing its performance with unseen persons and under 
-            different conditions. This exploration uncovered areas for improvement, which we will focus on in the future.
+            - ⚙️ **Control PID de Balancín**: 
+            - Implementé un control PID para un balancín utilizando un motor brushless de dron, un encoder magnético digital y una placa de desarrollo PSoc 5LP como controlador. Añadí una interfaz gráfica para modificar en tiempo real las constantes P-I-D y el setpoint (ángulo de inclinación del balancín), además de visualizar gráficas del error, la posición y la potencia del motor (0-100%).
+            - 🌡️ **Control PID de Temperatura**: 
+            - Desarrollé un control PID discreto en un Arduino UNO para regular la temperatura dentro de una cubeta de pintura, simulando una incubadora. La planta es un foco incandescente de 100W y el sensor es un DHT11. Controlamos la potencia del foco mediante un SSR y cruce por cero, permitiendo seleccionar la proporción de semiciclos de la onda de la red eléctrica en un segundo (x/120 semiciclos por segundo). También incluí una interfaz de control y monitoreo en LabVIEW para visualizar la temperatura actual y controlar los setpoints.
+            - 🔧 **Control de Movimiento de 2 Ejes con Motores DC con Encoder**: 
+            - Implementé un sistema de control de movimiento para dos ejes utilizando motores DC con encoders, permitiendo un control preciso de la posición para escanear los píxeles con dos LEDs, uno emisor y otro receptor infrarrojo. La interfaz del escaneo fue en un terminal y programada en Python.
+            
+            🛠️ **Mis Aportes**:
+            1. En todos los proyectos, fui responsable de la programación de los microcontroladores, la implementación de los algoritmos de control y la interfaz de control y monitoreo (a excepción del control de temperatura).
         """)
-        mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/Arabic-Word-level-Sign-Language-Recognition")
+        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            mention(label="Balancín", icon="tiktok", url="https://vm.tiktok.com/ZMkfK9REL/")
+        with col2:
+            mention(label="Incubadora", icon="youtube", url="https://youtu.be/9GzK51KK4rQ?si=dXn9kD5sQDgz_Gij")
+        with col3:
+            mention(label="Scanner de píxeles", icon="youtube", url="https://youtube.com/shorts/1h-Tq7sl8uE?si=FEmKmIi90RWEy_bA")
 
     with image_column:
-        st.image(PIDbalancin, caption="Germinado de lechugas hidropónicas")
-        st.image(PIDfoco, caption="Aprendí torneado básico")
-        st.image(CNCx, caption="Germinado de lechugas hidropónicas")
+        st.image(PIDbalancin, caption="Balancín con motor brushless")
+        st.image(PIDfoco, caption="Control de temperatura para incubadora de huevos")
+        st.image(CNCx, caption="Scanner de píxeles")
 
+# Proyectos de pcbs 
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.subheader("Arabic Word-level Sign Language Recognition", divider="blue")
-        st.write("*End of Year project*")
+        st.markdown("<h2 style='color:red;'>Tarjetas entrenadoras para FPGA y un control de consumo para cargas inductivas</h2>", unsafe_allow_html=True)
+        st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
+        st.write("*PCB | FPGA | Digital | Microcontrolador | Electrónica de potencia | Proyectos personales*")
         st.markdown("""
-            - ► Worked on the largest dataset for word-level Arabic sign language recognition, containing 502 words 
-            performed by three signers. I used the 100 words subset of this dataset for experiments.
-            - ► Leveraged mediapipe's holistic model to extract the hand and pose landmarks and used them to train a 
-            Bidirectional LSTM model. Setting Adam optimizer, categorical_crossentropy loss and categorical_accuracy metric.
-            - ► Achieved 99.6% accuracy on the test set and 0.026 loss.
-            - ► Examined the generalization ability of our model, testing its performance with unseen persons and under 
-            different conditions. This exploration uncovered areas for improvement, which we will focus on in the future.
+            - 🔧 **General**: 
+            - De manera independiente, trabajo en el diseño y fabricación de tarjetas electrónicas, así como en su comercialización, ya sea por afinidades propias o encargos de terceros. Algunas de ellas son las siguientes:
+            - 🛠️ **Breakout-board y tarjeta entrenadora para la NanoTang9k**:
+            - Esta tarjeta es compatible con el desarrollo de proyectos utilizando la NanoTang9k. Tiene un diseño económico de componentes, estratégicamente seleccionados y colocados para maximizar las capacidades de la FPGA. No impide el uso de la salida HDMI ni del slot de SDcard. Cuenta con una matriz de LEDs por multiplexación tri-state, display de 7 segmentos con 4 dígitos, 3 LEDs RGB direccionables, y la posibilidad de colocar módulos como el MPU6050, ESP01, DHT11/22, encoder digital, etc.
+            - 🛠️ **Breakout-board y tarjeta entrenadora para la NanoTang20k**:
+            - Esta tarjeta ofrece características similares a la NanoTang9k, pero está diseñada para aprovechar las capacidades adicionales de la NanoTang20k, principalmente asegurando la accesibilidad sin comprometer la salida HDMI, el slot de SDcard y el uso de códecs de audio.
+            - ⚡ **Controlador de consumo para cargas inductivas**:
+            - Esta tarjeta permite la comunicación mediante lectura analógica de voltaje, RS-485 y entradas digitales. Se controla por medio de 2 SCR antiparalelos para el consumo promedio regulado de una carga inductiva, y se le puede agregar una red snubber de acuerdo a la carga.
+            
+            📋 **Actividades**:
+            1. Diseño y fabricación de tarjetas electrónicas.
+            2. Programación, diseño electrónico y pruebas de los sistemas desarrollados.
+            3. Comercialización y soporte técnico de los productos.
         """)
-        mention(label="Github Repo", icon="github", url="https://github.com/issamjebnouni/Arabic-Word-level-Sign-Language-Recognition")
+        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            mention(label="Breakout-board 9k", icon="youtube", url="https://youtube.com/shorts/1Tsm5lJ4Fyw?si=9BlyFCejvi8cHO8Q")
+        with col2:
+            mention(label="Ejemplo", icon="tiktok", url="https://vm.tiktok.com/ZMkfKRUMX/")
+        with col3:
+            mention(label="Controlador de cargas inductivas", icon="tiktok", url="https://vm.tiktok.com/ZMkfKNdn2/")
 
     with image_column:
-        st.image(tang9, caption="Germinado de lechugas hidropónicas")
-        st.image(tang20, caption="Aprendí torneado básico")
-        st.image(controlpotencia, caption="Control de carga promedia AC")
+        st.image(tang9, caption="Breakout-board NanoTang-9k compatible")
+        st.image(tang20, caption="Breakout-board NanoTang-20k compatible")
+        st.image(controlpotencia, caption="Controlador de consumo para cargas inductivas")
 
 #PROYECTO LIBRE CULTIVO
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.subheader("Instrumentalización y automatización inteligente de cultivo urbano", divider="blue")
+        st.markdown("<h2 style='color:red;'>Instrumentalización y automatización inteligente de cultivo urbano</h2>", unsafe_allow_html=True)
+        st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
         st.write("*Agricultura de precisión - proyecto personal - actualmente activo*")
         st.markdown("""
             - 🥬 **Descripción**:
@@ -122,16 +149,16 @@ with st.container():
             5. Aprendizaje constante de las técnicas de cultivo hidropónico y aeropónico (aún en progreso). 
             6. Aprendizaje constante y actualmente en proceso de machine learning para la optimización de los parámetros de cultivo.
         """)
-        st.markdown("#### Evidencia Audiovisual", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
             mention(label="Playlist-documentación", icon="youtube", url="https://www.youtube.com/watch?v=h5dIs2VbnKQ&list=PLz4Si3LTpIHn8Sm7qZtzyirCftxZIDVzY&index=3")
         with col2:
             mention(label="Github Repo", icon="github", url="https://github.com/La-guajolota/Libre-cultivo")
         with col3:
-            mention(label="TEST_2", icon="tiktok", url="https://vm.tiktok.com/ZMkfv5oLb/")
+            mention(label="Champiñones", icon="tiktok", url="https://vm.tiktok.com/ZMkfKCyKS/")
 
     with image_column:
         st.image(stand, caption="Este es mi stand de cultivo urbano")
         st.image(hongo, caption="Actualmente experimento con el cultivo de zetas comestibles")
-        st.image(elec, caption="EL primer prototipado de control del rack")
+        st.image(elec, caption="El primer prototipado de control del rack")
