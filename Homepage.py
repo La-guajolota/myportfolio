@@ -118,4 +118,4 @@ with st.container():
         st.empty()
     
     with right_column:
-        st.image(img, use_container_width=True, output_format="PNG", caption="Adrián Silva Palafox")
+        st.image(img, width='stretch', output_format="PNG", caption="Adrián Silva Palafox")
