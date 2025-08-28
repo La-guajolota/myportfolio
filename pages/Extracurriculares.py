@@ -7,13 +7,72 @@ st.set_page_config(layout="wide")
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir.parent / "styles" / "projects.css"
 
+# --- CSS: cargamos tu CSS y luego sobreescribimos con estilos de tarjetas ---
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-st.markdown("<h2 style='text-align:center; font-weight:bold; margin-bottom:0;'>Actividades Extracurriculares</h2>", unsafe_allow_html=True)
-st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
+custom_css = """
+<style>
+/* Tarjeta limpia y legible sobre fondo oscuro */
+.card {
+  background: #ffffff;
+  padding: 18px 18px 14px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.18);
+  margin-bottom: 18px;
+  border: 1px solid rgba(0,0,0,.05);
+}
 
-# Images
+/* Asegura CONTRASTE dentro de la tarjeta, por encima de estilos globales */
+.card, .card * {
+  color: #1f2937 !important;         /* gris muy oscuro */
+  line-height: 1.45;
+}
+
+/* Título de cada bloque */
+.card h4 {
+  margin: 0 0 6px 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+/* Fecha en cursiva, más tenue (pero legible) */
+.card p {
+  margin: 0 0 8px 0;
+  opacity: .9;
+  font-style: italic;
+}
+
+/* Lista con separación */
+.card ul { margin: 0 0 0 18px; padding: 0; }
+.card li { margin: 6px 0; }
+
+/* Imágenes redondeadas y con sombra */
+img {
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.22);
+  margin-bottom: 12px;
+}
+
+/* Título principal */
+.section-title {
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+.section-rule {
+  border: 2px solid #e63946;
+  margin-top: 6px;
+}
+</style>
+"""
+st.markdown(custom_css, unsafe_allow_html=True)
+
+# --- TÍTULO ---
+st.markdown("<h2 class='section-title'>🚀 Actividades Extracurriculares</h2>", unsafe_allow_html=True)
+st.markdown("<hr class='section-rule'>", unsafe_allow_html=True)
+
+# --- Imágenes ---
 cio = Image.open('assets/ciologo.png')
 cioid = Image.open('assets/ciocredencial.jpeg')
 cioid = cioid.crop((0, 200, cioid.width, cioid.height - 200))
@@ -32,97 +91,115 @@ lechuga = Image.open('assets/lechuagerminado.jpeg')
 lechuga2 = Image.open('assets/lechugaleds.jpeg')
 lechuga3 = Image.open('assets/lechugasiemens.jpeg')
 
+# =========================
 # CIO
+# =========================
 with st.container():
-    text_column, mid, image_column = st.columns((3, 0.4, 1))
+    text_column, _, image_column = st.columns((3, 0.25, 1))
     with text_column:
-        st.subheader("Estancia de investigación", divider="blue")
-        st.write("*Ago – Dic 2023*")
         st.markdown("""
-        - **Descripción**: Participé en una estancia de investigación, colaborando en el proyecto titulado 'Diseño y fabricación de microbobinas en implementación de sensores biomédicos'.
-        - ► Aprendí procesos de microelectrónica y fabricación de capacitores, resistores y bobinas en técnicas de deposición de sustratos y semiconductores.
-        - ► Tuve instrucción en modelado matemático de microbobinas en diferentes geometrías implementadas en PCBs.
-        - ► Fui capacitado para ejercer funciones de técnico de laboratorio en cuarto limpio.
-        - ► Adquirí habilidad para documentar con herramientas como LaTeX.
-        """)
-    with mid:
-        st.empty()
+        <div class="card">
+          <h4 style="color:#007acc;">🔬 Estancia de investigación</h4>
+          <p>Ago – Dic 2023</p>
+          <ul>
+            <li><b>Descripción:</b> Proyecto “Diseño y fabricación de microbobinas en sensores biomédicos”.</li>
+            <li>Procesos de <b>microelectrónica</b> y deposición de semiconductores.</li>
+            <li>Modelado matemático de microbobinas en PCBs.</li>
+            <li>Capacitación en cuarto limpio.</li>
+            <li>Documentación técnica con <b>LaTeX</b>.</li>
+          </ul>
+        </div>
+        """, unsafe_allow_html=True)
     with image_column:
-        st.image(cio, caption="Centro de Investigación en Óptica")
-        st.image(cioid)
+        st.image(cio, caption="Centro de Investigación en Óptica", use_container_width=True)
+        st.image(cioid, use_container_width=True)
 
+# =========================
 # BUSHIDO SMC
+# =========================
 with st.container():
-    text_column, mid, image_column = st.columns((3, 0.4, 1))
+    text_column, _, image_column = st.columns((3, 0.25, 1))
     with text_column:
-        st.subheader("Reto BUSHIDO de SMC", divider="blue")
-        st.write("*2024*")
         st.markdown("""
-        - **General**: Tuve la oportunidad de participar en el reto Bushido, organizado y promocionado por SMC.
-        - ► Resolución de problemas de automatización industrial.
-        - ► Neumática y lógica cableada.
-        - ► Electroneumática.
-        - ► Programación de PLC.
-        """)
-    with mid:
-        st.empty()
+        <div class="card">
+          <h4 style="color:#f77f00;">⚙️ Reto BUSHIDO de SMC</h4>
+          <p>2024</p>
+          <ul>
+            <li><b>General:</b> Participación en reto de automatización industrial.</li>
+            <li>Resolución de problemas de <b>neumática</b> y <b>electroneumática</b>.</li>
+            <li>Lógica cableada y <b>programación de PLC</b>.</li>
+          </ul>
+        </div>
+        """, unsafe_allow_html=True)
     with image_column:
-        st.image(bushido, caption="SMC")
-        st.image(bushteam, caption="Soy el de guinda :)")
+        st.image(bushido, caption="SMC", use_container_width=True)
+        st.image(bushteam, caption="Soy el de guinda :)", use_container_width=True)
 
-# Agricultura vertical
+# =========================
+# AGRICULTURA VERTICAL
+# =========================
 with st.container():
-    text_column, mid, image_column = st.columns((3, 0.4, 1))
+    text_column, _, image_column = st.columns((3, 0.25, 1))
     with text_column:
-        st.subheader("Proyecto de investigación para automatización y optimización de procesos agrícolas", divider="blue")
-        st.write("*Nov 2024 – Actualidad*")
         st.markdown("""
-        - **Descripción**: Por iniciativa propia, recibo asesoría de un investigador de mi universidad y profesores de la escuela de agronomía. Las propuestas se enfocan en el estudio de técnicas de hidroponía vertical, especialmente (aunque hay interés en otros métodos), para su mecanización en todas las etapas de crecimiento del cultivo objetivo (actualmente, la lechuga romana). Se está trabajando en conjunto con los responsables y operadores del contenedor adquirido por la universidad de [Verde Compacto](https://www.youtube.com/watch?v=P3Bq6tVHDG4&t=9s).
-        - ► Actualmente me enfoco en el diseño de un sistema de adquisición de datos.
-        - ► Participo en diseños electrónicos y sistemas embebidos para el monitoreo de la calidad del agua y su dosificación óptima.
-        - ► Aprendo tópicos de agricultura de precisión tanto en la práctica como en investigación.
-        - ► Asisto a ferias y foros donde la agricultura de precisión es un área tratada y promovida, como la Agroferia de Irapuato o la Hannover-Messe.
-        """)
-    with mid:
-        st.empty()
+        <div class="card">
+          <h4 style="color:#2a9d8f;">🌱 Agricultura vertical e investigación</h4>
+          <p>Nov 2024 – Actualidad</p>
+          <ul>
+            <li><b>Descripción:</b> Investigación en técnicas de hidroponía vertical con asesoría universitaria.</li>
+            <li>Diseño de sistemas de adquisición de datos.</li>
+            <li>Electrónica y sistemas embebidos para <b>monitoreo de agua</b> y dosificación.</li>
+            <li>Práctica en <b>agricultura de precisión</b>.</li>
+            <li>Asistencia a foros (Agroferia Irapuato, Hannover-Messe).</li>
+          </ul>
+        </div>
+        """, unsafe_allow_html=True)
     with image_column:
-        st.image(lechuga, caption="Germinado de lechugas hidropónicas")
-        st.image(lechuga2, caption="Luz artificial con longitudes de onda idóneas para las hortalizas")
-        st.image(lechuga3, caption="Cultivo hidropónico de lechuga hermético")
+        st.image(lechuga, caption="Germinado de lechugas", use_container_width=True)
+        st.image(lechuga2, caption="Luz artificial óptima", use_container_width=True)
+        st.image(lechuga3, caption="Cultivo hidropónico hermético", use_container_width=True)
 
-# Equipos representativos BAJA y Electratón
+# =========================
+# BAJA / ELECTRATÓN
+# =========================
 with st.container():
-    text_column, mid, image_column = st.columns((3, 0.4, 1))
+    text_column, _, image_column = st.columns((3, 0.25, 1))
     with text_column:
-        st.subheader("Equipo representativo de la UDLSB de Baja y Electratón", divider="blue")
-        st.write("*Junio 2024 – Actualidad*")
         st.markdown("""
-        - **General**: Actúo como miembro-asesor de apoyo en proyectos que relacionan electrónica y programación de microcontroladores para funciones de telemetría.
-        - ► Colaboré en la programación de un tacómetro con un sensor de presencia inductivo.
-        - ► Participé en la implementación de un velocímetro mediante un módulo de GPS utilizando el protocolo NMEA.
-        - ► Apoyo con la programación de pantallas TFT para interfaces de usuario en automovilismo.
-        - ► Adquiero conocimientos básicos de mecánica.
-        """)
-    with mid:
-        st.empty()
+        <div class="card">
+          <h4 style="color:#e63946;">🏎️ Equipo representativo Baja y Electratón</h4>
+          <p>Junio 2024 – Actualidad</p>
+          <ul>
+            <li><b>Rol:</b> Miembro-asesor en electrónica y programación de microcontroladores.</li>
+            <li>Programación de tacómetro con sensor inductivo.</li>
+            <li>Implementación de velocímetro con GPS (NMEA).</li>
+            <li>Pantallas TFT para interfaces de usuario en automovilismo.</li>
+            <li>Conocimientos básicos de mecánica.</li>
+          </ul>
+        </div>
+        """, unsafe_allow_html=True)
     with image_column:
-        st.image(baja0, caption="Apoyé en el sistema eléctrico")
-        st.image(baja1, caption="Aprendí torneado básico")
-        st.image(baja2, caption="El suministro de energía en vehículos eléctricos es interesante")
+        st.image(baja0, caption="Apoyé en el sistema eléctrico", use_container_width=True)
+        st.image(baja1, caption="Aprendí torneado básico", use_container_width=True)
+        st.image(baja2, caption="Energía en vehículos eléctricos", use_container_width=True)
 
-# Equipo de robótica
+# =========================
+# ROBÓTICA
+# =========================
 with st.container():
-    text_column, mid, image_column = st.columns((3, 0.4, 1))
+    text_column, _, image_column = st.columns((3, 0.25, 1))
     with text_column:
-        st.subheader("Equipo de robótica", divider="blue")
-        st.write("*Nov 2024 – Actualidad*")
         st.markdown("""
-        - **General**: Actúo como miembro y asesor en proyectos para competencia de robótica.
-        - ► Trabajo en conjunto para un seguidor de línea velocista.
-        - ► Asesoro a integrantes de primeros semestres y nuevos en el club para el diseño electrónico de robots sumo.
-        """)
-    with mid:
-        st.empty()
+        <div class="card">
+          <h4 style="color:#9b5de5;">🤖 Equipo de robótica</h4>
+          <p>Nov 2024 – Actualidad</p>
+          <ul>
+            <li><b>General:</b> Asesor y miembro en proyectos de competencia de robótica.</li>
+            <li>Desarrollo de seguidor de línea velocista.</li>
+            <li>Asesoría a nuevos integrantes en diseño electrónico de robots sumo.</li>
+          </ul>
+        </div>
+        """, unsafe_allow_html=True)
     with image_column:
-        st.image(robotica0, caption="Un diseño mío de un buck-converter")
-        st.image(robotica1, caption="Una pieza que modelé")
+        st.image(robotica0, caption="Diseño de buck-converter", use_container_width=True)
+        st.image(robotica1, caption="Pieza modelada en 3D", use_container_width=True)
