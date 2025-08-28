@@ -13,23 +13,84 @@ css_file = current_dir.parent / "styles" / "projects.css"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-# Soldadura a puntos
-estructura = Image.open("assets/estructura.jpeg")
+# --- CARGA DE IMÁGENES ---
 
-# librecultivo
+# Proyectos agregados
+SCARA = Image.open("assets/SCARA.jpeg")
+horno = Image.open("assets/horno.jpg")
+
+# Proyectos originales
+estructura = Image.open("assets/estructura.jpeg")
 stand = Image.open("assets/standcultivo.jpeg")
 hongo = Image.open("assets/hongo.jpeg")
 elec = Image.open("assets/eleclechu.png")
-
-#CONTROLADORES
 PIDfoco = Image.open("assets/PIDfoco.jpeg")
 PIDbalancin = Image.open("assets/PIDbalancin.jpeg")
 CNCx = Image.open("assets/CNC.jpeg")
-
-#PCB
 tang20 = Image.open("assets/tang20k.jpeg")
 tang9 = Image.open("assets/tang9k.jpeg")
 controlpotencia = Image.open("assets/controlpotencia.jpeg")
+
+
+# --- PROYECTOS ---
+
+# PROYECTO ROBOT SCARA
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.markdown("<h2 style='color:red;'>🤖 Robot SCARA con microROS</h2>", unsafe_allow_html=True)
+        st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
+        st.write("*Robótica • ROS2 • Microcontroladores • Proyecto Personal*")
+        st.markdown("""
+            - ⚙️ **Descripción**:
+            - Programación de un robot SCARA integrado con microROS en ESP32 y ROS en una raspberry 5 para recolección de cajas por medio de visión artificial.
+            
+            🛠️ **Aportes**:
+            - Control de motores paso a paso con retroalimentación de encoders magnéticos.
+            - Integración exitosa de microROS con ROS2 para comunicación distribuida.
+            - Desarrollo de algoritmos de control para motores paso a paso.
+            - Creación de interfaz de usuario para control remoto del robot.
+            - Integración de comunicación a un PLC por modbus TCP.
+        """)
+        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            mention(label="Demo", icon="youtube", url="https://youtu.be/UwlWYntn_pg?si=N4t4PZQV8fb_UifI")
+        with col2:
+            mention(label="Repositorio", icon="github", url="https://github.com/La-guajolota/Robotica/tree/main/proyects/SCARA_robot")
+        with col3:
+            mention(label="Extra", icon="youtube", url="https://youtube.com/shorts/p9Vn9d3aslc?si=Wqwv5COZT4yjtEO0")
+
+    with image_column:
+        st.image(SCARA, caption="Robot SCARA con microROS")
+
+# PROYECTO HORNO DE REFLUJO
+with st.container():
+    text_column, image_column = st.columns((3,1))
+    with text_column:
+        st.markdown("<h2 style='color:red;'>🔥 Horno de Reflujo para PCBs</h2>", unsafe_allow_html=True)
+        st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
+        st.write("*Electrónica • Control de Temperatura • Automatización • Proyecto Personal*")
+        st.markdown("""
+            - ⚙️ **Descripción**:
+            - Sistema automatizado de horno de reflujo para soldadura de componentes SMD en PCBs. Incluye control preciso de temperatura mediante perfiles térmicos programables y monitoreo en tiempo real del proceso dentro de una interfaz web en una ESP01, con el control central en un STM32F144.
+            
+            🛠️ **Aportes**:
+            - Diseño e implementación de sistema de control térmico de precisión.
+            - Desarrollo de perfiles de temperatura programables para diferentes tipos de PCB.
+            - Interfaz de monitoreo y control en tiempo real.
+            - Sistema de seguridad con protecciones contra sobrecalentamiento.
+            - PID digital con filtro de Kalman para contrarestar la inercia térmica del termopar.
+        """)
+        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        col1, col2 = st.columns(2)
+        with col1:
+            mention(label="Demo", icon="youtube", url="https://youtu.be/XSk6v5LdElc?si=cIEzceQJt_Kj0cJl")
+        with col2:
+            mention(label="Repositorio", icon="github", url="https://github.com/La-guajolota/Horno_reflujo")
+
+    with image_column:
+        st.image(horno, caption="Horno de reflujo para PCBs")
 
 #PROYECTO SOLDADOR DE PUNTOS
 with st.container():
