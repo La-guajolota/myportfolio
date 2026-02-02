@@ -7,7 +7,7 @@ st.set_page_config(layout="centered")
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-resume_file = current_dir.parent / "assets" / "CV.pdf"
+resume_file = current_dir.parent / "assets" / "AdrianSilvaPalafox_CV.pdf"
 profile_pic = current_dir.parent / "assets" / "yo.jpeg"
 css_file = current_dir.parent / "styles" / "resume.css"
 
