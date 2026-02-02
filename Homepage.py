@@ -9,16 +9,24 @@ st.set_page_config(page_title="Mi Portafolio",
                    layout="wide")
 
 # --- Texto principal ---
-about_header = "🙋🏻 Sobre mí"
-subheader = "Ingeniero en sistemas embebidos en proceso"
+about_header = "👨‍💻 About Me"
+subheader = "Embedded Systems Engineer"
 intro_text = """
-👋🏻 ¡Hola, soy **Adrián**!  
-Estoy a punto de graduarme, con un fuerte sentido de motivación y dedicación para hacer contribuciones significativas en mi campo.  
+👋 Hi, I'm **Adrián Silva Palafox**!  
+A passionate Embedded Systems Engineer with expertise in firmware development, microcontroller programming, and hardware-software integration.
 
-💡 Me especializo en el desarrollo de firmware para microcontroladores, sistemas embebidos Linux y aplicaciones de IoT.  
-Me interesa aplicar tecnologías como **FreeRTOS, ROS/microROS y TinyML** en proyectos de automatización, agricultura de precisión y robótica.  
+🔧 **Core Competencies:**
+- Proficient in **C, C++, and Python** for embedded and systems programming
+- Real-time operating systems (**FreeRTOS, Zephyr**)
+- Embedded Linux & IoT application development
+- Communication protocols: **I2C, SPI, UART, CAN, MQTT**
+
+🎯 **Interests:**
+I'm enthusiastic about applying cutting-edge technologies like **FreeRTOS, ROS/microROS, and TinyML** to solve real-world challenges in automation, precision agriculture, and robotics.
+
+🚀 Currently seeking opportunities to contribute to innovative embedded systems projects where I can leverage my skills in low-level programming and system optimization.
 """
-resume_label = "📄 Descargar CV"
+resume_label = "📄 Download CV"
 
 # --- Paths ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()

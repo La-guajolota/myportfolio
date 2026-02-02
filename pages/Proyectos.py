@@ -5,7 +5,7 @@ from pathlib import Path
 
 st.set_page_config(layout="wide")
 
-st.markdown("<h1 style='text-align:center; font-weight:bold;'>Proyectos y prácticas destacables</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align:center; font-weight:bold;'>Featured Projects & Practical Work</h1>", unsafe_allow_html=True)
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir.parent / "styles" / "projects.css"
@@ -38,188 +38,188 @@ controlpotencia = Image.open("assets/controlpotencia.jpeg")
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.markdown("<h2 style='color:red;'>🤖 Robot SCARA con microROS</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:red;'>🤖 SCARA Robot with microROS</h2>", unsafe_allow_html=True)
         st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
-        st.write("*Robótica • ROS2 • Microcontroladores • Proyecto Personal*")
+        st.write("*Robotics • ROS2 • Microcontrollers • Personal Project*")
         st.markdown("""
-            - ⚙️ **Descripción**:
-            - Programación de un robot SCARA integrado con microROS en ESP32 y ROS en una raspberry 5 para recolección de cajas por medio de visión artificial.
+            - ⚙️ **Description**:
+            - Programming of a SCARA robot integrated with microROS on ESP32 and ROS on a Raspberry Pi 5 for box collection using computer vision.
             
-            🛠️ **Aportes**:
-            - Control de motores paso a paso con retroalimentación de encoders magnéticos.
-            - Integración exitosa de microROS con ROS2 para comunicación distribuida.
-            - Desarrollo de algoritmos de control para motores paso a paso.
-            - Creación de interfaz de usuario para control remoto del robot.
-            - Integración de comunicación a un PLC por modbus TCP.
+            🛠️ **Contributions**:
+            - Stepper motor control with magnetic encoder feedback.
+            - Successful integration of microROS with ROS2 for distributed communication.
+            - Development of control algorithms for stepper motors.
+            - Creation of user interface for remote robot control.
+            - Integration of PLC communication via Modbus TCP.
         """)
-        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:purple;'>Audiovisual Evidence</h2>", unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
             mention(label="Demo", icon="youtube", url="https://youtu.be/UwlWYntn_pg?si=N4t4PZQV8fb_UifI")
         with col2:
-            mention(label="Repositorio", icon="github", url="https://github.com/La-guajolota/Robotica/tree/main/proyects/SCARA_robot")
+            mention(label="Repository", icon="github", url="https://github.com/La-guajolota/Robotica/tree/main/proyects/SCARA_robot")
         with col3:
             mention(label="Extra", icon="youtube", url="https://youtube.com/shorts/p9Vn9d3aslc?si=Wqwv5COZT4yjtEO0")
 
     with image_column:
-        st.image(SCARA, caption="Robot SCARA con microROS")
+        st.image(SCARA, caption="SCARA Robot with microROS")
 
 # PROYECTO HORNO DE REFLUJO
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.markdown("<h2 style='color:red;'>🔥 Horno de Reflujo para PCBs</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:red;'>🔥 Reflow Oven for PCBs</h2>", unsafe_allow_html=True)
         st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
-        st.write("*Electrónica • Control de Temperatura • Automatización • Proyecto Personal*")
+        st.write("*Electronics • Temperature Control • Automation • Personal Project*")
         st.markdown("""
-            - ⚙️ **Descripción**:
-            - Sistema automatizado de horno de reflujo para soldadura de componentes SMD en PCBs. Incluye control preciso de temperatura mediante perfiles térmicos programables y monitoreo en tiempo real del proceso dentro de una interfaz web en una ESP01, con el control central en un STM32F144.
+            - ⚙️ **Description**:
+            - Automated reflow oven system for SMD component soldering on PCBs. Includes precise temperature control through programmable thermal profiles and real-time process monitoring via a web interface on an ESP01, with central control on an STM32F144.
             
-            🛠️ **Aportes**:
-            - Diseño e implementación de sistema de control térmico de precisión.
-            - Desarrollo de perfiles de temperatura programables para diferentes tipos de PCB.
-            - Interfaz de monitoreo y control en tiempo real.
-            - Sistema de seguridad con protecciones contra sobrecalentamiento.
-            - PID digital con filtro de Kalman para contrarestar la inercia térmica del termopar.
+            🛠️ **Contributions**:
+            - Design and implementation of precision thermal control system.
+            - Development of programmable temperature profiles for different PCB types.
+            - Real-time monitoring and control interface.
+            - Safety system with overheating protection.
+            - Digital PID with Kalman filter to counteract thermocouple thermal inertia.
         """)
-        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:purple;'>Audiovisual Evidence</h2>", unsafe_allow_html=True)
         col1, col2 = st.columns(2)
         with col1:
             mention(label="Demo", icon="youtube", url="https://youtu.be/XSk6v5LdElc?si=cIEzceQJt_Kj0cJl")
         with col2:
-            mention(label="Repositorio", icon="github", url="https://github.com/La-guajolota/Horno_reflujo")
+            mention(label="Repository", icon="github", url="https://github.com/La-guajolota/Horno_reflujo")
 
     with image_column:
-        st.image(horno, caption="Horno de reflujo para PCBs")
+        st.image(horno, caption="Reflow oven for PCBs")
 
 #PROYECTO SOLDADOR DE PUNTOS
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.markdown("<h2 style='color:red;'>Soldador de puntos</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:red;'>Spot Welder</h2>", unsafe_allow_html=True)
         st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
-        st.write("*Electrónica industrial - asignatura - equipo*")
+        st.write("*Industrial Electronics • Coursework • Team Project*")
         st.markdown("""
-            - ⚙️ **Descripción**:
-            - El proyecto consistió en diseñar y construir una automatización para soldadura por puntos utilizando PLC, HMI y neumática. El usuario puede seleccionar un modo manual, en el cual controla el voltaje promedio que pasa por el material y la posición del pistón que sujeta el electrodo. En modo automático, el operador selecciona la cantidad de ciclos, los tiempos de duración de cada ciclo y el voltaje promedio durante todo el proceso.
+            - ⚙️ **Description**:
+            - The project consisted of designing and building an automation system for spot welding using PLC, HMI, and pneumatics. The user can select manual mode, controlling the average voltage passing through the material and the position of the piston holding the electrode. In automatic mode, the operator selects the number of cycles, duration times for each cycle, and the average voltage throughout the process.
             
-            🛠️ **Mis aportes**:
-            Colaboré en la programación del PLC y en el diseño de una tarjeta de control para interfazar con el tablero de control.
-            Esta tarjeta permite controlar el voltaje promedio que pasa por el material mediante un potenciómetro.
-            La tarjeta fue implementada con un STM32f103c8t6. La misma que se encuentra en esta página.
+            🛠️ **My Contributions**:
+            I collaborated on PLC programming and designed a control board to interface with the control panel.
+            This board allows control of the average voltage passing through the material via a potentiometer.
+            The board was implemented with an STM32F103C8T6, the same one featured on this page.
         """)
-        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:purple;'>Audiovisual Evidence</h2>", unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
-            mention(label="Demostración", icon="tiktok", url="https://vm.tiktok.com/ZMkf7bJaX/")
+            mention(label="Demo", icon="tiktok", url="https://vm.tiktok.com/ZMkf7bJaX/")
         with col2:
             mention(label="TEST_1", icon="tiktok", url="https://vm.tiktok.com/ZMkfvYuPP/")
         with col3:
             mention(label="TEST_2", icon="tiktok", url="https://vm.tiktok.com/ZMkfv5oLb/")
 
     with image_column:
-        st.image(estructura, caption="Soldadora de puntos y panel de control")
+        st.image(estructura, caption="Spot welder and control panel")
 
 #Proyectos de control
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.markdown("<h2 style='color:red;'>Controles de posición y temperatura</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:red;'>Position and Temperature Control Systems</h2>", unsafe_allow_html=True)
         st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
-        st.write("*Control digital | microcontroladores | asignatura | Equipo*")
+        st.write("*Digital Control • Microcontrollers • Coursework • Team Projects*")
         st.markdown("""
-            - ⚙️ **Control PID de Balancín**: 
-            - Implementación de un control PID para un balancín utilizando un motor brushless de dron, un encoder magnético digital y una placa de desarrollo PSoc 5LP como controlador. Se añadió una interfaz gráfica para modificar en tiempo real las constantes P-I-D y el setpoint (ángulo de inclinación del balancín), además de visualizar gráficas del error, la posición y la potencia del motor (0-100%).
-            - 🌡️ **Control PID de Temperatura**: 
-            - Desarrollo de un control PID discreto en un Arduino UNO para regular la temperatura dentro de una cubeta de pintura, simulando una incubadora. La planta es un foco incandescente de 100W y el sensor es un DHT11. Se controla la potencia del foco mediante un SSR y cruce por cero, permitiendo seleccionar la proporción de semiciclos de la onda de la red eléctrica en un segundo (x/120 semiciclos por segundo). También se incluyó una interfaz de control y monitoreo en LabVIEW para visualizar la temperatura actual y controlar los setpoints.
-            - 🔧 **Control de Movimiento de 2 Ejes con Motores DC con Encoder**: 
-            - Implementación de un sistema de control de movimiento para dos ejes utilizando motores DC con encoders, permitiendo un control preciso de la posición para escanear los píxeles con dos LEDs, uno emisor y otro receptor infrarrojo. La interfaz del escaneo fue en un terminal y programada en Python.
+            - ⚙️ **PID Balance Beam Control**: 
+            - Implementation of a PID controller for a balance beam using a brushless drone motor, a digital magnetic encoder, and a PSoC 5LP development board as the controller. A graphical interface was added to modify P-I-D constants and setpoint (beam tilt angle) in real-time, as well as visualize error, position, and motor power (0-100%) graphs.
+            - 🌡️ **PID Temperature Control**: 
+            - Development of a discrete PID controller on an Arduino UNO to regulate temperature inside a paint bucket, simulating an incubator. The plant is a 100W incandescent bulb and the sensor is a DHT11. Bulb power is controlled via SSR and zero-crossing, allowing selection of the proportion of half-cycles of the electrical grid wave per second (x/120 half-cycles per second). A LabVIEW control and monitoring interface was also included.
+            - 🔧 **2-Axis Motion Control with DC Motors and Encoders**: 
+            - Implementation of a motion control system for two axes using DC motors with encoders, enabling precise position control to scan pixels with two LEDs, one infrared emitter and one receiver. The scanning interface was terminal-based and programmed in Python.
             
-            🛠️ **Aportes**:
-            1. En todos los proyectos, fui responsable de la programación de los microcontroladores, la implementación de los algoritmos de control y la interfaz de control y monitoreo (a excepción del control de temperatura).
+            🛠️ **Contributions**:
+            1. In all projects, I was responsible for microcontroller programming, control algorithm implementation, and the control/monitoring interface (except for the temperature control project).
         """)
-        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:purple;'>Audiovisual Evidence</h2>", unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
-            mention(label="Balancín", icon="tiktok", url="https://vm.tiktok.com/ZMkfK9REL/")
+            mention(label="Balance Beam", icon="tiktok", url="https://vm.tiktok.com/ZMkfK9REL/")
         with col2:
-            mention(label="Incubadora", icon="youtube", url="https://youtu.be/9GzK51KK4rQ?si=dXn9kD5sQDgz_Gij")
+            mention(label="Incubator", icon="youtube", url="https://youtu.be/9GzK51KK4rQ?si=dXn9kD5sQDgz_Gij")
         with col3:
-            mention(label="Scanner de píxeles", icon="youtube", url="https://youtube.com/shorts/1h-Tq7sl8uE?si=FEmKmIi90RWEy_bA")
+            mention(label="Pixel Scanner", icon="youtube", url="https://youtube.com/shorts/1h-Tq7sl8uE?si=FEmKmIi90RWEy_bA")
 
     with image_column:
-        st.image(PIDbalancin, caption="Balancín con motor brushless")
-        st.image(PIDfoco, caption="Control de temperatura para incubadora de huevos")
-        st.image(CNCx, caption="Scanner de píxeles")
+        st.image(PIDbalancin, caption="Balance beam with brushless motor")
+        st.image(PIDfoco, caption="Temperature control for egg incubator")
+        st.image(CNCx, caption="Pixel scanner")
 
 # Proyectos de pcbs 
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.markdown("<h2 style='color:red;'>Tarjetas entrenadoras para FPGA y un control de consumo para cargas inductivas</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:red;'>FPGA Trainer Boards & Inductive Load Power Controller</h2>", unsafe_allow_html=True)
         st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
-        st.write("*PCB | FPGA | Digital | Microcontrolador | Electrónica de potencia | Proyectos personales*")
+        st.write("*PCB Design • FPGA • Digital Systems • Microcontrollers • Power Electronics • Personal Projects*")
         st.markdown("""
-            - 🔧 **General**: 
-            - De manera independiente, trabajo en el diseño y fabricación de tarjetas electrónicas, así como en su comercialización, ya sea por afinidades propias o encargos de terceros. Algunas de ellas son las siguientes:
-            - 🛠️ **Breakout-board y tarjeta entrenadora para la NanoTang9k**:
-            - Esta tarjeta es compatible con el desarrollo de proyectos utilizando la NanoTang9k. Tiene un diseño económico de componentes, estratégicamente seleccionados y colocados para maximizar las capacidades de la FPGA. No impide el uso de la salida HDMI ni del slot de SDcard. Cuenta con una matriz de LEDs por multiplexación tri-state, display de 7 segmentos con 4 dígitos, 3 LEDs RGB direccionables, y la posibilidad de colocar módulos como el MPU6050, ESP01, DHT11/22, encoder digital, etc.
-            - 🛠️ **Breakout-board y tarjeta entrenadora para la NanoTang20k**:
-            - Esta tarjeta ofrece características similares a la NanoTang9k, pero está diseñada para aprovechar las capacidades adicionales de la NanoTang20k, principalmente asegurando la accesibilidad sin comprometer la salida HDMI, el slot de SDcard y el uso de códecs de audio.
-            - ⚡ **Controlador de consumo para cargas inductivas**:
-            - Esta tarjeta permite la comunicación mediante lectura analógica de voltaje, RS-485 y entradas digitales. Se controla por medio de 2 SCR antiparalelos para el consumo promedio regulado de una carga inductiva, y se le puede agregar una red snubber de acuerdo a la carga.
+            - 🔧 **Overview**: 
+            - Independently, I work on designing and manufacturing electronic boards, as well as their commercialization, either for personal interests or third-party orders. Some of them are:
+            - 🛠️ **Breakout Board & Trainer for NanoTang9k**:
+            - This board is compatible with NanoTang9k project development. It features an economical component design, strategically selected and placed to maximize FPGA capabilities. It doesn't obstruct the HDMI output or SD card slot. It includes a tri-state multiplexed LED matrix, 4-digit 7-segment display, 3 addressable RGB LEDs, and the ability to add modules like MPU6050, ESP01, DHT11/22, digital encoder, etc.
+            - 🛠️ **Breakout Board & Trainer for NanoTang20k**:
+            - This board offers similar features to the NanoTang9k version but is designed to leverage the additional capabilities of the NanoTang20k, mainly ensuring accessibility without compromising the HDMI output, SD card slot, and audio codec usage.
+            - ⚡ **Inductive Load Power Controller**:
+            - This board enables communication via analog voltage reading, RS-485, and digital inputs. It's controlled through 2 anti-parallel SCRs for regulated average consumption of an inductive load, with the option to add a snubber network according to the load.
             
-            📋 **Actividades**:
-            1. Diseño y fabricación de tarjetas electrónicas.
-            2. Programación, diseño electrónico y pruebas de los sistemas desarrollados.
-            3. Comercialización y soporte técnico de los productos.
+            📋 **Activities**:
+            1. Design and manufacturing of electronic boards.
+            2. Programming, electronic design, and testing of developed systems.
+            3. Commercialization and technical support for products.
         """)
-        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:purple;'>Audiovisual Evidence</h2>", unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
             mention(label="Breakout-board 9k", icon="youtube", url="https://youtube.com/shorts/1Tsm5lJ4Fyw?si=9BlyFCejvi8cHO8Q")
         with col2:
-            mention(label="Ejemplo", icon="tiktok", url="https://vm.tiktok.com/ZMkfKRUMX/")
+            mention(label="Example", icon="tiktok", url="https://vm.tiktok.com/ZMkfKRUMX/")
         with col3:
-            mention(label="Controlador de cargas inductivas", icon="tiktok", url="https://vm.tiktok.com/ZMkfKNdn2/")
+            mention(label="Inductive Load Controller", icon="tiktok", url="https://vm.tiktok.com/ZMkfKNdn2/")
 
     with image_column:
-        st.image(tang9, caption="Breakout-board NanoTang-9k compatible")
-        st.image(tang20, caption="Breakout-board NanoTang-20k compatible")
-        st.image(controlpotencia, caption="Controlador de consumo para cargas inductivas")
+        st.image(tang9, caption="NanoTang-9k compatible breakout board")
+        st.image(tang20, caption="NanoTang-20k compatible breakout board")
+        st.image(controlpotencia, caption="Inductive load power controller")
 
 #PROYECTO LIBRE CULTIVO
 with st.container():
     text_column, image_column = st.columns((3,1))
     with text_column:
-        st.markdown("<h2 style='color:red;'>Instrumentalización y automatización inteligente de cultivo urbano</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:red;'>Smart Instrumentation & Automation for Urban Farming</h2>", unsafe_allow_html=True)
         st.markdown("<hr style='border:2px solid red; margin-top:5px;'>", unsafe_allow_html=True)
-        st.write("*Agricultura de precisión - proyecto personal - actualmente activo*")
+        st.write("*Precision Agriculture • Personal Project • Currently Active*")
         st.markdown("""
-            - 🥬 **Descripción**:
-            El objetivo es desarrollar un sistema de control autónomo y dinámico para un cultivo vertical urbano. Las metas incluyen sensar en tiempo real 
-            el estado del stand de crecimiento, almacenar una gran cantidad de parámetros para análisis posteriores (con la posibilidad de implementar 
-            soluciones de control adaptativo) y dosificar inteligentemente para economizar recursos hídricos y energéticos. Actualmente, el proyecto se encuentra 
-            en fase de pruebas e investigación.
+            - 🥬 **Description**:
+            The goal is to develop an autonomous and dynamic control system for urban vertical farming. Objectives include real-time sensing 
+            of the growth stand status, storing a large number of parameters for later analysis (with the possibility of implementing 
+            adaptive control solutions), and intelligent dosing to save water and energy resources. Currently, the project is 
+            in the testing and research phase.
                
-            🥬 **Logros**:
-            1. Diseño de una tarjeta de control de intensidad lumínica de LEDs de horticultura, incluyendo protección contra sobretensiones y corrientes.
-            2. Interfaz de control y monitoreo móvil y web por MQTT.
-            3. Diseño de mi propio sistema de red de sensores y actuadores (IoT). Aún estoy trabajando en el diseño analógico de sensores con electrodos selectivos de iones para medir la concentración de nutrientes y la calidad del agua.
-            4. Implementación de filtros digitales para sensores analógicos, así como métodos estadísticos eficientes en microcontroladores.
-            5. Aprendizaje constante de las técnicas de cultivo hidropónico y aeropónico (aún en progreso). 
-            6. Aprendizaje constante y actualmente en proceso de machine learning para la optimización de los parámetros de cultivo.
+            🥬 **Achievements**:
+            1. Design of a light intensity control board for horticultural LEDs, including overvoltage and overcurrent protection.
+            2. Mobile and web control/monitoring interface via MQTT.
+            3. Design of my own IoT sensor and actuator network system. I'm still working on the analog design of ion-selective electrode sensors to measure nutrient concentration and water quality.
+            4. Implementation of digital filters for analog sensors, as well as efficient statistical methods for microcontrollers.
+            5. Continuous learning of hydroponic and aeroponic cultivation techniques (still in progress).
+            6. Continuous learning and currently in the process of machine learning for crop parameter optimization.
         """)
-        st.markdown("<h2 style='color:purple;'>Evidencia Audiovisual</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:purple;'>Audiovisual Evidence</h2>", unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
-            mention(label="Playlist-documentación", icon="youtube", url="https://www.youtube.com/watch?v=h5dIs2VbnKQ&list=PLz4Si3LTpIHn8Sm7qZtzyirCftxZIDVzY&index=3")
+            mention(label="Documentation Playlist", icon="youtube", url="https://www.youtube.com/watch?v=h5dIs2VbnKQ&list=PLz4Si3LTpIHn8Sm7qZtzyirCftxZIDVzY&index=3")
         with col2:
             mention(label="Github Repo", icon="github", url="https://github.com/La-guajolota/Libre-cultivo")
         with col3:
-            mention(label="Champiñones", icon="tiktok", url="https://vm.tiktok.com/ZMkfKCyKS/")
+            mention(label="Mushrooms", icon="tiktok", url="https://vm.tiktok.com/ZMkfKCyKS/")
 
     with image_column:
-        st.image(stand, caption="Este es mi stand de cultivo urbano")
-        st.image(hongo, caption="Actualmente experimento con el cultivo de zetas comestibles")
-        st.image(elec, caption="El primer prototipado de control del rack")
+        st.image(stand, caption="My urban farming stand")
+        st.image(hongo, caption="Currently experimenting with edible mushroom cultivation")
+        st.image(elec, caption="First prototype of rack control system")

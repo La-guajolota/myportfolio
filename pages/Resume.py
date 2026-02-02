@@ -32,9 +32,9 @@ with st.container():
 
     with right_column:
         st.title("Adrián Silva Palafox")
-        st.write("Ingeniero de sistemas embebidos")
+        st.write("Embedded Systems Engineer")
         st.download_button(
-            label=" 📄 Descarga CV",
+            label=" 📄 Download CV",
             data=PDFbyte,
             file_name=resume_file.name,
             mime="application/octet-stream",
@@ -47,117 +47,118 @@ with st.container():
 
 # --- LEVEL LEGEND ---
 st.write('')
-st.subheader("📊 Leyenda de niveles")
+st.subheader("📊 Skill Level Legend")
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.markdown("""**🟢 Avanzado**
-    - Dominio completo de la materia, capaz de diseñar y depurar sistemas de forma autónoma.""")
+    st.markdown("""**🟢 Advanced**
+    - Full mastery of the subject, capable of designing and debugging systems autonomously.""")
 with col2:
-    st.markdown("""**🟡 Intermedio**
-    - Con experiencia práctica, resuelve tareas comunes y aprende rápidamente temas nuevos.""")
+    st.markdown("""**🟡 Intermediate**
+    - Practical experience, solves common tasks and quickly learns new topics.""")
 with col3:
-    st.markdown("""**🔵 Básico**
-    - Conocimientos fundamentales, en proceso de aprendizaje y práctica.""")
+    st.markdown("""**🔵 Basic**
+    - Fundamental knowledge, in the process of learning and practicing.""")
 
 # --- Skills ---
 st.write('\n')
-st.subheader("💻 Habilidades", divider="red")
+st.subheader("💻 Technical Skills", divider="red")
 
 st.markdown(
     """
-### ⚙️ Sistemas embebidos  
+### ⚙️ Embedded Systems  
 - 🟢 **C/C++**   
 - 🟡 **VHDL, Verilog**   
-- 🔵 **Ensamblador**   
+- 🔵 **Assembly**   
 - 🟡 **FreeRTOS**   
 - 🟢 **UART, SPI, I2C**   
 - 🟡 **CAN**   
 
-### 🖥️ Lenguajes de apoyo  
+### 🖥️ Supporting Languages  
 - 🟢 **Python**   
 - 🟡 **MATLAB/Octave**   
 - 🔵 **PHP, HTML, CSS**   
 
-### 🧩 Frameworks  
+### 🧩 Frameworks & Tools  
 - 🟡 **ROS / microROS**  
 - 🟡 **Edge Impulse**  
 - 🟡 **OpenCV**  
 - 🔵 **TensorFlow Lite**  
 
-### 🌐 Protocolos y comunicación  
+### 🌐 Protocols & Communication  
 - 🟡 **MQTT, LoRa, Modbus**  
 
-### 🐧 Sistemas GNU/Linux  
+### 🐧 GNU/Linux Systems  
 - 🟡 **Ubuntu Server**, **Debian Server**  
 - 🔵 **Yocto / Buildroot**  
 
-### 📐 CADs y Modelado  
+### 📐 CAD & Modeling  
 - 🟢 **KiCad**  
 - 🔵 **Altium Designer, FreeCAD**  
 
-### 🔬 Instrumentación y Automatización  
+### 🔬 Instrumentation & Automation  
 - 🟡 **Node-RED**, **LabVIEW**  
-- 🔵 **PLC Siemens**, **Electroneumática**  
+- 🔵 **Siemens PLC**, **Electropneumatics**  
 
-### 🌍 Idiomas  
-- 🇬🇧 Inglés (80%)  
+### 🌍 Languages  
+- 🇬🇧 English (80%)  
+- 🇪🇸 Spanish (Native)  
 """
 )
 
 
 # --- EDUCATION ---
 st.write('\n')
-st.subheader("🎓 Educación", divider="red")
+st.subheader("🎓 Education", divider="red")
 
 st.markdown(
     """
-**Licenciatura en Ingeniería en Electrónica y Telecomunicaciones**  
+**Bachelor's Degree in Electronics and Telecommunications Engineering**  
 📍 [Universidad La Salle Bajío](https://www.lasallebajio.edu.mx/)  
-📅 2021 – Actualidad  
+📅 2021 – Present  
 
-**Cursos y capacitaciones adicionales:**  
-- 🛠️ Taller de Máquinas Herramienta – IECA León GTO (Febrero – Marzo 2022)  
-- 🤖 Redes Neuronales – IECA en línea (Septiembre – Diciembre 2021)  
+**Additional Courses & Training:**  
+- 🛠️ Machine Tools Workshop – IECA León GTO (February – March 2022)  
+- 🤖 Neural Networks – IECA Online (September – December 2021)  
 """
 )
 
 
 # --- WORK EXPERIENCE ---
 st.write('\n')
-st.subheader("💼 Experiencia", divider="red")
+st.subheader("💼 Experience", divider="red")
 
 st.markdown(
     """
-**Ingeniero de aplicación Jr @ [INBIODROID](https://inbiodroid.com/)**  
-📅 Enero – Septiembre 2025  
+**Jr. Application Engineer @ [INBIODROID](https://inbiodroid.com/)**  
+📅 January – September 2025  
 
-- 🔧 Desarrollo de firmware robusto para control de horno de reflujo.  
-- 📈 Implementación de controlador PID + filtro de Kalman.  
-- 🌐 Interfaz web embebida para monitoreo y control.  
-- 📐 Colaboración en diseño de PCB.  
+- 🔧 Developed robust firmware for reflow oven control.  
+- 📈 Implemented PID controller + Kalman filter.  
+- 🌐 Built embedded web interface for monitoring and control.  
+- 📐 Collaborated on PCB design.  
 ---
-**Equipos representativos @ ULSB**  
-📅 Enero 2024 – Actualidad  
+**Representative Teams @ ULSB**  
+📅 January 2024 – Present  
 
-- 🤖 Robótica competitiva: seguidores de línea y sumos RF.  
-- 🚀 Proyecto Mars Rover: asesor técnico en electrónica, ROS/microROS y GNU Radio.  
+- 🤖 Competitive robotics: line followers and RF sumo robots.  
+- 🚀 Mars Rover Project: technical advisor in electronics, ROS/microROS, and GNU Radio.  
 ---
-**Becario de investigación @ [CIO](https://www.cio.mx/)**  
-📅 Agosto – Diciembre 2023  
+**Research Intern @ [CIO](https://www.cio.mx/)**  
+📅 August – December 2023  
 
-- 🧪 Proyecto “Diseño y fabricación de microbobinas”.  
-- 🧼 Procesos de microfabricación en cuarto limpio.  
-- 📊 Simulación electromagnética (COMSOL Multiphysics).  
+- 🧪 Project: "Design and fabrication of microcoils".  
+- 🧼 Microfabrication processes in cleanroom environment.  
+- 📊 Electromagnetic simulation (COMSOL Multiphysics).  
 ---
-**Participante Reto Bushido @ SMC**  
-📅 Septiembre 2023  
+**Bushido Challenge Participant @ SMC**  
+📅 September 2023  
 
-- ⚙️ Automatización industrial con PLCs y electroneumática.  
+- ⚙️ Industrial automation with PLCs and electropneumatics.  
 ---
-**Instructor de inglés y matemáticas @ [KUMON](https://www.kumon.com/mx-es/)**  
-📅 Enero 2021 – Septiembre 2022  
+**English & Math Instructor @ [KUMON](https://www.kumon.com/mx-es/)**  
+📅 January 2021 – September 2022  
 
-- 📚 Asesoría académica en inglés y matemáticas (primaria a preparatoria).  
-- 💻 Actividades de ofimática y gestión de contenidos educativos.  
+- 📚 Academic tutoring in English and Mathematics (elementary to high school).  
+- 💻 Office administration and educational content management.  
 """
 )
