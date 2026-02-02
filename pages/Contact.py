@@ -1,8 +1,9 @@
 import streamlit as st
-import sys
 from pathlib import Path
+import sys
 
-sys.path.append(str(Path(__file__).parent.parent))
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils import add_footer
 
 st.set_page_config(page_title="Contact | Adrián Silva Palafox", page_icon="📬", layout="centered")

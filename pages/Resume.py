@@ -1,6 +1,10 @@
 from pathlib import Path
 from PIL import Image
 import streamlit as st
+import sys
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils import social_icons, add_footer
 
 st.set_page_config(layout="centered")

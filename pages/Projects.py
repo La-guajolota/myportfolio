@@ -4,7 +4,8 @@ from PIL import Image
 from pathlib import Path
 import sys
 
-sys.path.append(str(Path(__file__).parent.parent))
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils import add_footer
 
 st.set_page_config(layout="wide", page_title="Projects | Adrián Silva Palafox")
