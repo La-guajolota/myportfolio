@@ -22,7 +22,7 @@ resume_label = "📄 Descargar CV"
 
 # --- Paths ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-resume_file = current_dir / "assets" / "CV.pdf"
+resume_file = current_dir / "assets" / "AdrianSilvaPalafox_CV.pdf"
 css_file = current_dir / "styles" / "homepage.css"
 
 # --- CSS personalizado ---
