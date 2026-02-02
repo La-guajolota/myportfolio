@@ -30,7 +30,7 @@ def add_footer():
         bottom: 0;
         width: 100%;
         background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-        padding: 10px 20px;
+        padding: 12px 20px;
         text-align: center;
         font-size: 0.8em;
         color: #888;
@@ -57,7 +57,11 @@ def add_footer():
         (Claude Opus 4.5)
         <span class="footer-icon">⚡</span>
         <br>
-        <small>I'm an embedded systems engineer, not a web developer — so I orchestrated this fast & easy with AI assistance for rapid prototyping.</small>
+        <small>
+            I'm an embedded systems engineer, not a web developer — so I orchestrated this fast & easy with AI assistance.
+            <br>
+            Template forked from <a href="https://github.com/issamjebnouni" target="_blank">issamjebnouni</a> 🙏
+        </small>
     </div>
     """
     st.markdown(footer_html, unsafe_allow_html=True)

@@ -8,6 +8,8 @@ A professional portfolio website built with **Streamlit** showcasing my work as 
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B?logo=streamlit&logoColor=white)  
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+> **Note:** This project is a fork of [issamjebnouni's portfolio template](https://github.com/issamjebnouni). Thank you for the excellent foundation!
+
 ## 🌐 Live Demo
 
 👉 **[View Portfolio](https://your-portfolio-url.streamlit.app)**
@@ -214,12 +216,14 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
+- **[Issam Jebnouni](https://github.com/issamjebnouni)** - Original portfolio template author
 - [Streamlit](https://streamlit.io/) - For the amazing framework
 - [streamlit-extras](https://github.com/arnaudmiribel/streamlit-extras) - For enhanced components
-- [Liberation Fonts](https://github.com/liberationfonts) - Typography
+- **GitHub Copilot (Claude Opus 4.5)** - AI assistance for rapid development
 
 ---
 
 <p align="center">  
-  Made with ❤️ by Adrián Silva Palafox  
+  Made with ❤️ by Adrián Silva Palafox<br>
+  <small>Forked from <a href="https://github.com/issamjebnouni">issamjebnouni</a></small>
 </p>
