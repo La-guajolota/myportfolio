@@ -69,57 +69,58 @@ with col3:
     st.markdown("""**🔵 Basic**
     - Fundamental knowledge, in the process of learning and practicing.""")
 
-# --- Skills ---
+# --- Skills with Visual Progress Bars ---
 st.write('\n')
 st.subheader("💻 Technical Skills", divider="red")
 
-st.markdown(
-    """
-### ⚙️ Embedded Systems & Firmware
-| Skill | Level | Details |
-|-------|-------|---------|
-| **C/C++** | 🟢 Advanced | Production firmware, bare-metal & RTOS |
-| **Python** | 🟢 Advanced | Automation, testing, data processing |
-| **VHDL/Verilog** | 🟡 Intermediate | FPGA development |
-| **Assembly** | 🔵 Basic | Low-level optimization |
-| **FreeRTOS** | 🟡 Intermediate | Multi-task applications, queues, semaphores |
-| **UART, SPI, I2C** | 🟢 Advanced | Driver development, protocol debugging |
-| **CAN** | 🟡 Intermediate | Automotive/industrial applications |
+def skill_bar(skill_name, level, color="#e63946"):
+    """Create a visual skill bar. Level: 0-100"""
+    st.markdown(f"""
+    <div style='margin-bottom: 10px;'>
+        <div style='display: flex; justify-content: space-between; margin-bottom: 2px;'>
+            <span style='font-weight: 600;'>{skill_name}</span>
+            <span style='color: #888;'>{level}%</span>
+        </div>
+        <div style='background: #2a2a4a; border-radius: 10px; height: 8px; overflow: hidden;'>
+            <div style='background: {color}; width: {level}%; height: 100%; border-radius: 10px;'></div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-### 🧩 Frameworks & Tools
-| Skill | Level | Details |
-|-------|-------|---------|
-| **ROS / microROS** | 🟡 Intermediate | Robot control, distributed systems |
-| **Edge Impulse / TinyML** | 🟡 Intermediate | On-device ML inference |
-| **OpenCV** | 🟡 Intermediate | Computer vision applications |
-| **TensorFlow Lite** | 🔵 Basic | Embedded ML models |
-| **KiCad** | 🟢 Advanced | Schematic capture, PCB layout, DFM |
+st.markdown("### ⚙️ Embedded Systems & Firmware")
+skill_col1, skill_col2 = st.columns(2)
 
-### 🌐 Protocols & Connectivity
-| Skill | Level | Details |
-|-------|-------|---------|
-| **MQTT** | 🟡 Intermediate | IoT messaging, broker setup |
-| **Modbus TCP/RTU** | 🟡 Intermediate | Industrial automation |
-| **LoRa** | 🟡 Intermediate | Long-range sensor networks |
+with skill_col1:
+    skill_bar("C/C++", 90)
+    skill_bar("Python", 85)
+    skill_bar("FreeRTOS", 70)
 
-### 🐧 Systems & Platforms
-| Skill | Level | Details |
-|-------|-------|---------|
-| **Ubuntu/Debian Server** | 🟡 Intermediate | Server administration |
-| **Yocto / Buildroot** | 🔵 Basic | Custom Linux images |
+with skill_col2:
+    skill_bar("UART/SPI/I2C", 90)
+    skill_bar("CAN", 65)
+    skill_bar("VHDL/Verilog", 60)
 
-### 🔬 Instrumentation & Automation
-| Skill | Level | Details |
-|-------|-------|---------|
-| **Node-RED, LabVIEW** | 🟡 Intermediate | Data flow programming |
-| **Siemens PLC** | 🔵 Basic | Industrial automation |
-| **Electropneumatics** | 🔵 Basic | Pneumatic control systems |
+st.markdown("### 🧩 Frameworks & Tools")
+skill_col3, skill_col4 = st.columns(2)
 
-### 🌍 Languages
-- 🇬🇧 **English** – Professional working proficiency (80%)
-- 🇪🇸 **Spanish** – Native
-"""
-)
+with skill_col3:
+    skill_bar("ROS / microROS", 70, "#9b5de5")
+    skill_bar("KiCad", 85, "#9b5de5")
+
+with skill_col4:
+    skill_bar("Edge Impulse / TinyML", 65, "#9b5de5")
+    skill_bar("OpenCV", 60, "#9b5de5")
+
+st.markdown("### 🌐 Protocols & IoT")
+skill_col5, skill_col6 = st.columns(2)
+
+with skill_col5:
+    skill_bar("MQTT", 75, "#2a9d8f")
+    skill_bar("Modbus", 70, "#2a9d8f")
+
+with skill_col6:
+    skill_bar("LoRa", 65, "#2a9d8f")
+    skill_bar("Embedded Linux", 60, "#2a9d8f")
 
 # --- WORK EXPERIENCE ---
 st.write('\n')

@@ -125,6 +125,52 @@ with st.container():
     with right_column:
         st.image(img, width='stretch', output_format="PNG", caption="Adrián Silva Palafox")
 
+# --- METRICS SECTION ---
+st.divider()
+st.subheader("📊 By the Numbers")
+
+metric_col1, metric_col2, metric_col3, metric_col4 = st.columns(4)
+
+with metric_col1:
+    st.metric(label="Projects Completed", value="10+", delta="Active")
+with metric_col2:
+    st.metric(label="Technologies", value="15+", delta="Growing")
+with metric_col3:
+    st.metric(label="GitHub Repos", value="20+", delta="Public")
+with metric_col4:
+    st.metric(label="Years Learning", value="4+", delta="Continuous")
+
+# --- FEATURED PROJECTS PREVIEW ---
+st.divider()
+st.subheader("🌟 Featured Projects")
+st.caption("Click to see full details on the Projects page")
+
+proj_col1, proj_col2, proj_col3 = st.columns(3)
+
+with proj_col1:
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 15px; border-radius: 12px; border-left: 4px solid #e63946;'>
+        <h4 style='color: #e63946; margin: 0;'>🤖 SCARA Robot</h4>
+        <p style='color: #888; font-size: 0.85em;'>microROS • ROS2 • Computer Vision</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with proj_col2:
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 15px; border-radius: 12px; border-left: 4px solid #e63946;'>
+        <h4 style='color: #e63946; margin: 0;'>🔥 Reflow Oven</h4>
+        <p style='color: #888; font-size: 0.85em;'>PID Control • Kalman Filter • Web UI</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with proj_col3:
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 15px; border-radius: 12px; border-left: 4px solid #e63946;'>
+        <h4 style='color: #e63946; margin: 0;'>🌱 Smart Farming</h4>
+        <p style='color: #888; font-size: 0.85em;'>IoT • MQTT • Precision Agriculture</p>
+    </div>
+    """, unsafe_allow_html=True)
+
 # --- Call to Action ---
 st.divider()
 col1, col2, col3 = st.columns(3)
