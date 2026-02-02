@@ -2,6 +2,10 @@ import streamlit as st
 from streamlit_extras.mention import mention
 from PIL import Image
 from pathlib import Path
+import sys
+
+sys.path.append(str(Path(__file__).parent.parent))
+from utils import add_footer
 
 st.set_page_config(layout="wide", page_title="Projects | Adrián Silva Palafox")
 
@@ -331,3 +335,6 @@ with st.container():
         st.image(stand, caption="Urban farming stand")
         st.image(hongo, caption="Mushroom cultivation")
         st.image(elec, caption="Control prototype")
+
+# --- Footer ---
+add_footer()

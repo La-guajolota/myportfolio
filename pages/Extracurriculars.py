@@ -1,6 +1,10 @@
 import streamlit as st
 from PIL import Image
 from pathlib import Path
+import sys
+
+sys.path.append(str(Path(__file__).parent.parent))
+from utils import add_footer
 
 st.set_page_config(layout="wide", page_title="Extracurriculars | Adrián Silva Palafox")
 
@@ -210,3 +214,6 @@ with col3:
     st.metric("Teams", "3 Active", "Baja, Robotics, Rover")
 with col4:
     st.metric("Personal Projects", "5+", "Ongoing")
+
+# --- Footer ---
+add_footer()

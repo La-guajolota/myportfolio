@@ -1,7 +1,7 @@
 from pathlib import Path
 from PIL import Image
 import streamlit as st
-from utils import social_icons
+from utils import social_icons, add_footer
 
 st.set_page_config(layout="centered")
 
@@ -208,3 +208,6 @@ st.markdown(
 | Neural Networks Course | IECA Online | Sep – Dec 2021 |
 """
 )
+
+# --- Footer ---
+add_footer()

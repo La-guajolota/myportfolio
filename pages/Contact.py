@@ -1,4 +1,9 @@
 import streamlit as st
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).parent.parent))
+from utils import add_footer
 
 st.set_page_config(page_title="Contact | Adrián Silva Palafox", page_icon="📬", layout="centered")
 
@@ -55,3 +60,6 @@ st.divider()
 st.markdown("### 📍 Location")
 st.markdown("Based in **León, Guanajuato, Mexico** 🇲🇽")
 st.markdown("Open to **remote work** and **relocation** opportunities.")
+
+# --- Footer ---
+add_footer()

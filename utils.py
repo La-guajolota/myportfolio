@@ -18,4 +18,48 @@ def social_icons(width=24, height=24, **kwargs):
             icons_html += icon_template.format(url=url, icon_src=icon_src, alt_text=name.capitalize(), width=width, height=height)
     return icons_html
 
+def add_footer():
+    """Add a consistent footer to all pages"""
+    import streamlit as st
+    
+    footer_html = """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 0.8em;
+        color: #888;
+        border-top: 1px solid rgba(230, 57, 70, 0.3);
+        z-index: 999;
+    }
+    .footer a {
+        color: #e63946;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+    .footer-icon {
+        font-size: 1em;
+        margin: 0 3px;
+    }
+    </style>
+    <div class="footer">
+        <span class="footer-icon">🤖</span> 
+        <strong>AI-Assisted Portfolio</strong> — Built with 
+        <a href="https://streamlit.io/" target="_blank">Streamlit</a> + 
+        <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> 
+        (Claude Opus 4.5)
+        <span class="footer-icon">⚡</span>
+        <br>
+        <small>I'm an embedded systems engineer, not a web developer — so I orchestrated this fast & easy with AI assistance for rapid prototyping.</small>
+    </div>
+    """
+    st.markdown(footer_html, unsafe_allow_html=True)
+
 

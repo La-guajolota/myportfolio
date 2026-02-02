@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 from pathlib import Path
-from utils import social_icons
+from utils import social_icons, add_footer
 
 # Page configuration
 st.set_page_config(page_title="Adrián Silva Palafox | Embedded Systems Engineer", 
@@ -191,3 +191,6 @@ with col3:
     - 💼 Jr. Application Engineer @ INBIODROID
     - 🌐 English (B2) / Spanish (Native)
     """)
+
+# --- Footer ---
+add_footer()
