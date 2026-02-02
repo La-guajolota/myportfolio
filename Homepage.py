@@ -3,12 +3,12 @@ from PIL import Image
 from pathlib import Path
 from utils import social_icons
 
-# Configuración de la página
-st.set_page_config(page_title="Mi Portafolio", 
+# Page configuration
+st.set_page_config(page_title="Adrian Silva Palafox | Portfolio", 
                    page_icon=":rocket:", 
                    layout="wide")
 
-# --- Texto principal ---
+# --- Main Text ---
 about_header = "👨‍💻 About Me"
 subheader = "Embedded Systems Engineer"
 intro_text = """
@@ -25,6 +25,8 @@ A passionate Embedded Systems Engineer with expertise in firmware development, m
 I'm enthusiastic about applying cutting-edge technologies like **FreeRTOS, ROS/microROS, and TinyML** to solve real-world challenges in automation, precision agriculture, and robotics.
 
 🚀 Currently seeking opportunities to contribute to innovative embedded systems projects where I can leverage my skills in low-level programming and system optimization.
+
+📍 Based in León, Guanajuato, Mexico
 """
 resume_label = "📄 Download CV"
 
@@ -127,3 +129,11 @@ with st.container():
     
     with right_column:
         st.image(img, width='stretch', output_format="PNG", caption="Adrián Silva Palafox")
+
+# --- CONTACT SECTION ---
+st.divider()
+st.subheader("📬 Let's Connect!")
+st.markdown("""
+I'm always open to discussing new projects, collaborations, or opportunities in embedded systems and IoT.  
+Feel free to reach out via email or connect with me on LinkedIn!
+""")

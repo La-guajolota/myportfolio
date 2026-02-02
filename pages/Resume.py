@@ -115,10 +115,17 @@ st.markdown(
 **Bachelor's Degree in Electronics and Telecommunications Engineering**  
 📍 [Universidad La Salle Bajío](https://www.lasallebajio.edu.mx/)  
 📅 2021 – Present  
+"""
+)
 
-**Additional Courses & Training:**  
-- 🛠️ Machine Tools Workshop – IECA León GTO (February – March 2022)  
-- 🤖 Neural Networks – IECA Online (September – December 2021)  
+# --- CERTIFICATIONS ---
+st.write('\n')
+st.subheader("📜 Certifications & Training", divider="red")
+
+st.markdown(
+    """
+- 🛠️ **Machine Tools Workshop** – IECA León GTO (Feb – Mar 2022)  
+- 🤖 **Neural Networks Course** – IECA Online (Sep – Dec 2021)  
 """
 )
 
