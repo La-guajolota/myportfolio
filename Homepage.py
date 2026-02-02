@@ -4,29 +4,41 @@ from pathlib import Path
 from utils import social_icons
 
 # Page configuration
-st.set_page_config(page_title="Adrian Silva Palafox | Portfolio", 
-                   page_icon=":rocket:", 
+st.set_page_config(page_title="Adrián Silva Palafox | Embedded Systems Engineer", 
+                   page_icon="🔧", 
                    layout="wide")
 
 # --- Main Text ---
 about_header = "👨‍💻 About Me"
-subheader = "Embedded Systems Engineer"
+subheader = "Embedded Systems Engineer | Firmware Developer | IoT Specialist"
 intro_text = """
 👋 Hi, I'm **Adrián Silva Palafox**!  
-A passionate Embedded Systems Engineer with expertise in firmware development, microcontroller programming, and hardware-software integration.
 
-🔧 **Core Competencies:**
-- Proficient in **C, C++, and Python** for embedded and systems programming
-- Real-time operating systems (**FreeRTOS, Zephyr**)
-- Embedded Linux & IoT application development
-- Communication protocols: **I2C, SPI, UART, CAN, MQTT**
+I design and build **reliable embedded systems** that bridge hardware and software. With hands-on experience in firmware development, real-time systems, and IoT applications, I transform complex requirements into efficient, production-ready solutions.
 
-🎯 **Interests:**
-I'm enthusiastic about applying cutting-edge technologies like **FreeRTOS, ROS/microROS, and TinyML** to solve real-world challenges in automation, precision agriculture, and robotics.
+---
 
-🚀 Currently seeking opportunities to contribute to innovative embedded systems projects where I can leverage my skills in low-level programming and system optimization.
+### 🎯 What I Bring to Your Team
 
-📍 Based in León, Guanajuato, Mexico
+| **Firmware Development** | **Real-Time Systems** | **IoT & Connectivity** |
+|:------------------------:|:---------------------:|:----------------------:|
+| C/C++, Python, VHDL | FreeRTOS | MQTT, LoRa, Modbus |
+| ARM Cortex-M (STM32, ESP32) | PID Control, Kalman Filters | Embedded Linux |
+| UART, SPI, I2C, CAN | ROS/microROS | Edge Impulse, TinyML |
+
+---
+
+### 🏆 Key Achievements
+
+- 🔥 **Developed production firmware** for reflow oven with PID + Kalman filter control achieving precise temperature profiles
+- 🤖 **Integrated microROS with ROS2** for SCARA robot enabling real-time distributed communication with Modbus TCP
+- 📐 **Designed custom PCBs** including FPGA trainer boards (Tang Nano 9K/20K) and power control systems
+- 🌱 **Building IoT precision agriculture system** with custom sensor networks and MQTT dashboards
+- 🔬 **Research intern at CIO** - Microcoil design and fabrication for biomedical sensors
+
+---
+
+📍 **León, Guanajuato, Mexico** | Open to relocation | Available for remote work
 """
 resume_label = "📄 Download CV"
 
@@ -35,26 +47,24 @@ current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 resume_file = current_dir / "assets" / "AdrianSilvaPalafox_CV.pdf"
 css_file = current_dir / "styles" / "homepage.css"
 
-# --- CSS personalizado ---
+# --- Custom CSS ---
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 extra_css = """
 <style>
 .about-card {
-  background: #ffffff;
-  padding: 18px 18px 14px;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,.18);
-  margin-bottom: 18px;
-  border: 1px solid rgba(0,0,0,.05);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 20px 24px 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+  margin-bottom: 20px;
+  border: 1px solid rgba(230,57,70,0.3);
 }
-/* Asegura CONTRASTE dentro de la tarjeta, por encima de estilos globales */
-.about-card, .about-card * {
-  color: #1f2937 !important;         /* gris muy oscuro */
-  line-height: 1.45;
+.about-card h2 {
+  color: #e63946 !important;
+  margin: 0;
 }
-
 .profile-pic {
   border-radius: 50%;
   box-shadow: 0 4px 14px rgba(0,0,0,.25);
@@ -62,52 +72,37 @@ extra_css = """
   margin: auto;
 }
 .cv-btn > button {
-  background-color: #e63946 !important;
+  background: linear-gradient(135deg, #e63946 0%, #d62839 100%) !important;
   color: white !important;
-  border-radius: 8px !important;
-  font-weight: 600 !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  padding: 12px 24px !important;
+  font-size: 1.1rem !important;
+  transition: transform 0.2s ease !important;
 }
-.timeline {
-  margin-top: 40px;
-  padding-left: 20px;
-  border-left: 3px solid #e63946;
-}
-.timeline-item {
-  margin-bottom: 25px;
-}
-.timeline-date {
-  font-weight: bold;
-  color: #e63946;
-}
-.timeline-title {
-  font-size: 18px;
-  font-weight: 600;
-}
-.timeline-sub {
-  font-size: 14px;
-  font-style: italic;
-  color: #555;
+.cv-btn > button:hover {
+  transform: translateY(-2px) !important;
 }
 </style>
 """
 st.markdown(extra_css, unsafe_allow_html=True)
 
-# --- Cargar archivos ---
+# --- Load files ---
 with open(resume_file, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 
 img = Image.open("assets/yo.jpeg")
 
-# --- Layout principal ---
+# --- Main Layout ---
 with st.container():
-    left_column, middle_column, right_column = st.columns((1.2, 0.1, 0.7))
+    left_column, middle_column, right_column = st.columns((1.3, 0.1, 0.6))
     
     with left_column:
         st.markdown(f"<div class='about-card'><h2>{about_header}</h2></div>", unsafe_allow_html=True)
         st.subheader(subheader)
-        st.write(intro_text)
+        st.markdown(intro_text)
         
-        # Botón CV
+        # CV Button
         st.markdown("<div class='cv-btn'>", unsafe_allow_html=True)
         st.download_button(
             label=resume_label,
@@ -119,7 +114,7 @@ with st.container():
         # Social icons
         st.markdown(
             social_icons(40, 40, 
-                         LinkedIn="https://www.linkedin.com/in/adri%C3%A1n-silva-palafox-a17a6a274/", 
+                         LinkedIn="https://www.linkedin.com/in/adrian-silva-palafox/", 
                          GitHub="https://github.com/La-guajolota"), 
             unsafe_allow_html=True
         )
@@ -130,10 +125,23 @@ with st.container():
     with right_column:
         st.image(img, width='stretch', output_format="PNG", caption="Adrián Silva Palafox")
 
-# --- CONTACT SECTION ---
+# --- Call to Action ---
 st.divider()
-st.subheader("📬 Let's Connect!")
-st.markdown("""
-I'm always open to discussing new projects, collaborations, or opportunities in embedded systems and IoT.  
-Feel free to reach out via email or connect with me on LinkedIn!
-""")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("### 📧 Get In Touch")
+    st.markdown("**adriansilpa@gmail.com**")
+    st.markdown("**+52 477 264 1384**")
+
+with col2:
+    st.markdown("### 🔗 Explore My Work")
+    st.markdown("Check out my **Projects** page to see detailed case studies with code repositories and demo videos.")
+
+with col3:
+    st.markdown("### 📄 Quick Facts")
+    st.markdown("""
+    - 🎓 B.S. Electronics & Telecom (2025)
+    - 💼 Jr. Application Engineer @ INBIODROID
+    - 🌐 English (B2) / Spanish (Native)
+    """)
