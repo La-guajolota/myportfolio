@@ -73,58 +73,26 @@ with col3:
     st.markdown("""**🔵 Basic**
     - Fundamental knowledge, in the process of learning and practicing.""")
 
-# --- Skills with Visual Progress Bars ---
+# --- Technical Skills ---
 st.write('\n')
 st.subheader("💻 Technical Skills", divider="red")
 
-def skill_bar(skill_name, level, color="#e63946"):
-    """Create a visual skill bar. Level: 0-100"""
-    st.markdown(f"""
-    <div style='margin-bottom: 10px;'>
-        <div style='display: flex; justify-content: space-between; margin-bottom: 2px;'>
-            <span style='font-weight: 600;'>{skill_name}</span>
-            <span style='color: #888;'>{level}%</span>
-        </div>
-        <div style='background: #2a2a4a; border-radius: 10px; height: 8px; overflow: hidden;'>
-            <div style='background: {color}; width: {level}%; height: 100%; border-radius: 10px;'></div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
 st.markdown("### ⚙️ Embedded Systems & Firmware")
-skill_col1, skill_col2 = st.columns(2)
-
-with skill_col1:
-    skill_bar("C/C++", 90)
-    skill_bar("Python", 85)
-    skill_bar("FreeRTOS", 70)
-
-with skill_col2:
-    skill_bar("UART/SPI/I2C", 90)
-    skill_bar("CAN", 65)
-    skill_bar("VHDL/Verilog", 60)
+st.markdown("""
+- 🟢 **C/C++** • 🟢 **Python** • 🟢 **UART/SPI/I2C**
+- 🟡 **FreeRTOS** • 🟡 **CAN** • 🟡 **VHDL/Verilog**
+""")
 
 st.markdown("### 🧩 Frameworks & Tools")
-skill_col3, skill_col4 = st.columns(2)
-
-with skill_col3:
-    skill_bar("ROS / microROS", 70, "#9b5de5")
-    skill_bar("KiCad", 85, "#9b5de5")
-
-with skill_col4:
-    skill_bar("Edge Impulse / TinyML", 65, "#9b5de5")
-    skill_bar("OpenCV", 60, "#9b5de5")
+st.markdown("""
+- 🟢 **KiCad**
+- 🟡 **ROS / microROS** • 🟡 **Edge Impulse / TinyML** • 🟡 **OpenCV**
+""")
 
 st.markdown("### 🌐 Protocols & IoT")
-skill_col5, skill_col6 = st.columns(2)
-
-with skill_col5:
-    skill_bar("MQTT", 75, "#2a9d8f")
-    skill_bar("Modbus", 70, "#2a9d8f")
-
-with skill_col6:
-    skill_bar("LoRa", 65, "#2a9d8f")
-    skill_bar("Embedded Linux", 60, "#2a9d8f")
+st.markdown("""
+- 🟡 **MQTT** • 🟡 **Modbus** • 🟡 **LoRa** • 🟡 **Embedded Linux**
+""")
 
 # --- WORK EXPERIENCE ---
 st.write('\n')
